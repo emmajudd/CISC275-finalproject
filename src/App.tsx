@@ -31,6 +31,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
           Mia Pfaff
+          Emma Judd
         </p>
         <a
           className="App-link"
