@@ -33,6 +33,7 @@ function App() {
           Mia Pfaff
           Emma Judd
           Sean Smith
+          Tyler Walsh
         </p>
         <a
           className="App-link"
