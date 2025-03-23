@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: 100vh; /* Ensures the body takes at least full viewport height */
+    min-height: 100vh; /* Ensures the body takes at least full viewport height */ 
     height: 100%; /* Ensures that the body can grow if content exceeds viewport */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     overflow-y: auto; /* Enables vertical scrolling */
@@ -54,21 +54,23 @@
   }
   
   /* Container for planners */
-  .planner-container {
+  .question-container {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-top: 30px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping */
     padding-bottom: 30px;
+    width: 100%; /* Ensure container takes full width */
+    max-width: 1200px; /* Ensure enough space for side-by-side display */
   }
   
   /* Card styles */
-  .workout-planner, .meal-planner {
+  .basic-questions, .detailed-questions {
     background: white;
     border-radius: 12px;
     padding: 30px;
-    width: 45%;
+    flex-basis: 45%; /* Ensure cards take up 45% of the container width */
     max-width: 400px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -79,7 +81,7 @@
   }
   
   /* Hover effect */
-  .workout-planner:hover, .meal-planner:hover {
+  .basic-questions:hover, .detailed-questions:hover {
     transform: rotate(-2deg) scale(1.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, #fefcea, #f1da36);
@@ -123,22 +125,7 @@
   }
   
   
-  /* Contact Info Styling */
-  .contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0;
-  }
-  
-  .contact-info li {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  .footer p {
-    font-size: 14px;
-    margin-top: 20px;
-  }
+
   
   /* Ensure responsiveness */
   @media (max-width: 1024px) {
@@ -146,11 +133,11 @@
       padding-top: 70px;
     }
   
-    .planner-container {
+    .question-container {
       gap: 20px;
     }
   
-    .workout-planner, .meal-planner {
+    .basic-questions, .detailed-questions{
       width: 75%;
     }
   }
@@ -160,12 +147,12 @@
       padding-top: 60px;
     }
   
-    .planner-container {
+    .question-container {
       flex-direction: column;
       align-items: center;
     }
   
-    .workout-planner, .meal-planner {
+    .basic-questions, .detailed-questions {
       width: 90%;
       padding: 25px;
     }

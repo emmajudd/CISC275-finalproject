@@ -6,7 +6,7 @@ const HomePage = () => {
     <div className="homepage">
       <h1>The Career Helpi</h1>
       
-      <div className="basic-questions">
+      <div className="question-container">
         {/* Basic Questions Section */}
         <section className="basic-questions">
           <h2>Basic Questions</h2>
