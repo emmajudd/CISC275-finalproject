@@ -117,7 +117,7 @@
   /* Hover effect for buttons */
   button:hover {
     transform: scale(1.05);
-    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    background: linear-gradient(135deg, #f368be, #ff5fe4);
   }
   
   /* Footer Section (to prevent extra space at the bottom) */
