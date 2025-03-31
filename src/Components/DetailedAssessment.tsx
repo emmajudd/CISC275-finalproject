@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./DetailedAssessment.css"; // Import CSS for styling
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "./ProgressBar";
 
 const questions = [
   "Is financial success more motivating to you than job stability or making a difference?",
@@ -20,9 +21,14 @@ function DetailedAssessment() {
       setAnswers((prev) => ({ ...prev, [index]: answer }));
     };
   
+    // Calculate progress percentage
+    const progress = (Object.keys(answers).length / questions.length) * 100;
+  
     return (
       <div className="detailed-assessment">
         <h1>Detailed Career Assessment</h1>
+  
+        <ProgressBar progress={progress} />
   
         <form>
           {questions.map((question, index) => (

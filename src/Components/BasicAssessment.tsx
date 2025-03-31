@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./BasicAssessment.css"; // Import CSS for styling
 import { useNavigate } from "react-router-dom";
 import { Form } from "react-bootstrap";
+import ProgressBar from "./ProgressBar";
 
 const questions = [
   "Do you have a skill that others often struggle with but comes naturally to you?",
@@ -28,9 +29,14 @@ function BasicAssessment() {
     setAnswers((prev) => ({ ...prev, [index]: answer }));
   };
 
+  // Calculate progress percentage
+  const progress = (Object.keys(answers).length / questions.length) * 100;
+
   return (
     <div className="basic-assessment">
       <h1>Basic Career Assessment</h1>
+      
+      <ProgressBar progress={progress} />
 
       <form>
         {questions.map((question, index) => (
