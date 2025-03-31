@@ -1,0 +1,176 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Full-page styling with gradient */
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8eaf6, #f5f7fa); /* Soft gradient */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* Ensures the body takes at least full viewport height */ 
+    height: 100%; /* Ensures that the body can grow if content exceeds viewport */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Page fade-in effect */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Main content wrapper */
+  .homepage {
+    text-align: center;
+    padding: 30px 20px;
+    width: 100%; /* Ensure content stretches across full width */
+    max-width: 1200px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Spaced-out heading */
+  h1 {
+    color: blue;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    padding: 10px 0;
+  }
+  
+  /* Container for planners */
+  .question-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    padding-bottom: 30px;
+    width: 100%; /* Ensure container takes full width */
+    max-width: 1200px; /* Ensure enough space for side-by-side display */
+  }
+  
+  /* Card styles */
+  .basic-questions, .detailed-questions {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    flex-basis: 45%; /* Ensure cards take up 45% of the container width */
+    max-width: 400px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1;
+    min-width: 280px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: floatUp 0.8s ease-in-out;
+  }
+  
+  /* Hover effect */
+  .basic-questions:hover {
+    transform: rotate(-2deg) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #fefcea, #f1da36);
+  }
+
+  .detailed-questions:hover {
+    transform: rotate(2deg) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #fefcea, #f1da36);
+  }
+  
+  /* Titles inside cards */
+  h2 {
+    color: #27ae60;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Fun Button Styles */
+  button {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  /* Hover effect for buttons */
+  button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+  }
+  
+  /* Footer Section (to prevent extra space at the bottom) */
+  footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%; /* Ensure it takes full width */
+    position: relative;
+    bottom: 0;
+  }
+  
+  
+
+  
+  /* Ensure responsiveness */
+  @media (max-width: 1024px) {
+    .homepage {
+      padding-top: 70px;
+    }
+  
+    .question-container {
+      gap: 20px;
+    }
+  
+    .basic-questions, .detailed-questions{
+      width: 75%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .homepage {
+      padding-top: 60px;
+    }
+  
+    .question-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .basic-questions, .detailed-questions {
+      width: 90%;
+      padding: 25px;
+    }
+  
+    .cards-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    .card {
+      width: 90%;
+      padding: 25px;
+    }
+  }
