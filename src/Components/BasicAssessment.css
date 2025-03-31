@@ -1,0 +1,43 @@
+.basic-assessment {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .question-block {
+    margin-bottom: 20px;
+  }
+  
+  .answer-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: 2px solid #333;
+    background: rgb(219, 105, 230);
+    cursor: pointer;
+    
+  }
+  
+  button.selected {
+    background: #007bff;
+    color: white;
+    border-color: #0056b3;
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background: #218838;
+  }
+  
