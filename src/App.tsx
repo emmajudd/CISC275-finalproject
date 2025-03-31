@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import { Button, Form } from 'react-bootstrap';
 import Homepage from './Pages/Homepage'; // Import Homepage component
+import BasicAssessment from './Components/BasicAssessment';
+import DetailedAssessment from './Components/DetailedAssessment';
+
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -26,6 +30,19 @@ function App() {
     setKey(event.target.value);
   }
   return (
+    <div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/basic-assessment" element={<BasicAssessment />} />
+        <Route path="/detailed-assessment" element={<DetailedAssessment />} />
+      </Routes>
+    </Router>
+    
+    </div>
+    
+    /*
+    <div><Homepage /></div>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -45,14 +62,16 @@ function App() {
           Learn React
         </a>
       </header>
+      
       <Form>
         <Form.Label>API Key:</Form.Label>
         <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
         <br></br>
         <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
       </Form>
-      <Homepage /> {/* Render Homepage component */}
-    </div>
+      */
+  /* Render Homepage component */
+      
   );
 }
 
