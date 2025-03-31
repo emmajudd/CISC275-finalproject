@@ -81,8 +81,14 @@
   }
   
   /* Hover effect */
-  .basic-questions:hover, .detailed-questions:hover {
+  .basic-questions:hover {
     transform: rotate(-2deg) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #fefcea, #f1da36);
+  }
+
+  .detailed-questions:hover {
+    transform: rotate(2deg) scale(1.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, #fefcea, #f1da36);
   }
