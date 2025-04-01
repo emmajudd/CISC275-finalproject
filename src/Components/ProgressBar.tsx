@@ -14,5 +14,5 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
     </div>
   );
 };
-
+//stupid commit
 export default ProgressBar; 
