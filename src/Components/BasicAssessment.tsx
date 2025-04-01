@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./BasicAssessment.css"; // Import CSS for styling
 import { useNavigate } from "react-router-dom";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import ProgressBar from "./ProgressBar";
 
 const questions = [
@@ -38,7 +38,7 @@ function BasicAssessment() {
       
       <ProgressBar progress={progress} />
 
-      <form>
+      <Form>
         {questions.map((question, index) => (
           <div key={index} className="question-block">
             <p>{question}</p>
@@ -77,12 +77,12 @@ function BasicAssessment() {
           </div>
         ))}
 
-        <button type="submit" className="submit-button">
+        <Button type="submit" className="submit-button">
           Submit Answers
-        </button>
-      </form>
+        </Button>
+      </Form>
 
-      <button onClick={() => navigate("/")}>Go Back to Home</button>
+      <Button onClick={() => navigate("/")}>Go Back to Home</Button>
     </div>
   );
 };

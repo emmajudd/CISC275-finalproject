@@ -1,24 +1,26 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate, Link } from 'react-router-dom';
-import logo from './logo.svg';
+//import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+//import logo from './logo.svg';
 import './App.css';
-import { Button, Form } from 'react-bootstrap';
+//import { Form } from 'react-bootstrap';
 import Homepage from './Pages/Homepage'; // Import Homepage component
 import BasicAssessment from './Components/BasicAssessment';
 import DetailedAssessment from './Components/DetailedAssessment';
 
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
-let keyData = "";
-const saveKeyData = "MYKEY";
-const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
+//let keyData = "";
+//const saveKeyData = "MYKEY";
+//const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
+/*
 if (prevKey !== null) {
   keyData = JSON.parse(prevKey);
 }
-
+  */
 function App() {
-  const [key, setKey] = useState<string>(keyData); //for api key input
+  //const [key, setKey] = useState<string>(keyData); //for api key input
   
+  /*
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -29,6 +31,7 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+    */
   return (
     <div>
     <Router>

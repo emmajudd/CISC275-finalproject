@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import "./DetailedAssessment.css"; // Import CSS for styling
 import { useNavigate } from "react-router-dom";
 import ProgressBar from "./ProgressBar";
+import { Button } from "react-bootstrap";
+
 
 const questions = [
   "Is financial success more motivating to you than job stability or making a difference?",
@@ -69,12 +71,12 @@ function DetailedAssessment() {
             </div>
           ))}
   
-          <button type="submit" className="submit-button">
+          <Button type="submit" className="submit-button">
             Submit Answers
-          </button>
+          </Button>
         </form>
   
-        <button onClick={() => navigate("/")}>Go Back to Home</button>
+        <Button onClick={() => navigate("/")}>Go Back to Home</Button>
       </div>
     );
   };
