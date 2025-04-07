@@ -1,0 +1,85 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and main content adjustments */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8eaf6;
+    color: #333;
+    padding-top: 80px; /* Ensure there is enough space at the top for the navbar */
+}
+
+/* Regular Navbar (Not Fixed) */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dedede;
+    padding: 15px 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto; /* Center the navbar */
+    border-radius: 15px;
+    z-index: 1000; /* Keeps it above other elements */
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navbar-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar-link a:hover {
+    color: #f0a500;
+}
+
+/* Make navbar fully responsive */
+@media (max-width: 1024px) {
+    .navbar {
+        width: 90%;
+        padding: 15px 40px;
+    }
+
+    .navbar-links {
+        gap: 30px;
+    }
+
+    .navbar-link a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 95%;
+        padding: 10px 30px;
+        border-radius: 10px;
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar-link a {
+        font-size: 16px;
+    }
+}

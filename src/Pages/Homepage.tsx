@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate} from "react-router-dom"
-
 import "./Homepage.css"; // Import CSS for styling
 import { Button } from "react-bootstrap";
 
