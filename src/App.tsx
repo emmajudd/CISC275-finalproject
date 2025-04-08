@@ -1,5 +1,5 @@
 //import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 //import logo from './logo.svg';
 import './App.css';
 //import { Form } from 'react-bootstrap';
@@ -33,7 +33,7 @@ function App() {
   }
     */
   return (
-    <div>
+
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -42,7 +42,6 @@ function App() {
       </Routes>
     </Router>
     
-    </div>
     
     /*
     <div><Homepage /></div>
