@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./DetailedAssessment.css"; // Import CSS for styling
-import { useNavigate } from "react-router-dom";
 import ProgressBar from "./ProgressBar";
 import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 
 const questions = [
