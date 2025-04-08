@@ -38,11 +38,11 @@ All files                |       0 |        0 |       0 |       0 |
   BasicAssessment.tsx    |       0 |      100 |       0 |       0 | 7-85              
   DetailedAssessment.tsx |       0 |      100 |       0 |       0 | 8-79              
   ProgressBar.tsx        |       0 |      100 |       0 |       0 | 8-9               
- src/Pages               |       0 |      100 |       0 |       0 |                   
-  Homepage.tsx           |       0 |      100 |       0 |       0 | 7-27              
+ src/Pages               |       0 |        0 |       0 |       0 |                   
+  Homepage.tsx           |       0 |        0 |       0 |       0 | 8-49              
 -------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.331 s
+Time:        2.301 s
 Ran all test suites.
