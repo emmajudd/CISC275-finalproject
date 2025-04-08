@@ -12,7 +12,7 @@ FAIL src/App.test.tsx
       src/App.test.tsx
 
       1 | //import React, { useState } from 'react';
-    > 2 | import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+    > 2 | import { HashRouter as Router, Routes, Route } from 'react-router-dom';
         | ^
       3 | //import logo from './logo.svg';
       4 | import './App.css';
@@ -44,5 +44,5 @@ All files                |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.264 s
+Time:        2.349 s
 Ran all test suites.
