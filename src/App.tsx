@@ -9,7 +9,6 @@ import DetailedAssessment from './Components/DetailedAssessment';
 
 
 
-
 function App() {
   return (
     <div>
