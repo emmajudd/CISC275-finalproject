@@ -31,7 +31,7 @@ File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Li
 -------------------------|---------|----------|---------|---------|-------------------
 All files                |       0 |        0 |       0 |       0 |                   
  src                     |       0 |        0 |       0 |       0 |                   
-  App.tsx                |       0 |      100 |       0 |       0 | 13                
+  App.tsx                |       0 |      100 |       0 |       0 | 14                
   index.tsx              |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts     |       0 |        0 |       0 |       0 | 3-10              
  src/Components          |       0 |      100 |       0 |       0 |                   
@@ -45,5 +45,5 @@ All files                |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.262 s
+Time:        2.269 s
 Ran all test suites.
