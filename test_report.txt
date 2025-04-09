@@ -31,12 +31,14 @@ File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Li
 -------------------------|---------|----------|---------|---------|-------------------
 All files                |       0 |        0 |       0 |       0 |                   
  src                     |       0 |        0 |       0 |       0 |                   
-  App.tsx                |       0 |      100 |       0 |       0 | 14                
+  App.tsx                |       0 |      100 |       0 |       0 | 15                
   index.tsx              |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts     |       0 |        0 |       0 |       0 | 3-10              
- src/Components          |       0 |      100 |       0 |       0 |                   
-  BasicAssessment.tsx    |       0 |      100 |       0 |       0 | 7-85              
-  DetailedAssessment.tsx |       0 |      100 |       0 |       0 | 8-79              
+ src/Components          |       0 |        0 |       0 |       0 |                   
+  BasicAssessment.tsx    |       0 |        0 |       0 |       0 | 7-118             
+  BasicResults.tsx       |       0 |      100 |       0 |       0 | 9                 
+  DetailedAssessment.tsx |       0 |        0 |       0 |       0 | 8-114             
+  DetailedResults.tsx    |       0 |      100 |       0 |       0 | 9                 
   Navbar.tsx             |       0 |      100 |       0 |       0 | 5-6               
   ProgressBar.tsx        |       0 |      100 |       0 |       0 | 8-9               
  src/Pages               |       0 |        0 |       0 |       0 |                   
@@ -45,5 +47,5 @@ All files                |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.448 s
+Time:        2.407 s
 Ran all test suites.
