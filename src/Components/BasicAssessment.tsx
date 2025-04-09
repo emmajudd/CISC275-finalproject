@@ -81,7 +81,9 @@ function BasicAssessment() {
         ))}
 
         <Button 
-        type="submit" className="submit-button" onClick={() => handlePopup()}>
+        type="submit" className="submit-button" onClick={(e) => {
+          e.preventDefault();
+          handlePopup()}}>
           
           Submit Answers
         </Button>
