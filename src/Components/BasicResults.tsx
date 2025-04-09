@@ -1,10 +1,10 @@
 // BasicResults.tsx
 import React from "react";
-import { Button } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+//import { Button } from "react-bootstrap";
+//import { useNavigate } from "react-router-dom";
 
 function BasicResults() {
-  const navigate = useNavigate();
+//  const navigate = useNavigate();
 
   return (
     <div className="results-page">
