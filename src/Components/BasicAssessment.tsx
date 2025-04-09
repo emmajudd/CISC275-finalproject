@@ -24,6 +24,7 @@ const questions = [
 function BasicAssessment() {
   const navigate = useNavigate();
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
+  const [showPopup, setPopup] = useState(false);
 
   const handleAnswer = (index: number, answer: string) => {
     setAnswers((prev) => ({ ...prev, [index]: answer }));
@@ -31,6 +32,8 @@ function BasicAssessment() {
 
   // Calculate progress percentage
   const progress = (Object.keys(answers).length / questions.length) * 100;
+
+  const handlePopup = ()=>{setPopup(true)};
 
   return (
     <div className="basic-assessment">
@@ -77,10 +80,40 @@ function BasicAssessment() {
           </div>
         ))}
 
-        <Button type="submit" className="submit-button">
+        <Button 
+        type="submit" className="submit-button" onClick={() => handlePopup()}>
+          
           Submit Answers
         </Button>
       </Form>
+      {showPopup && (
+  <div className="popup-overlay">
+    <div className="popup-content">
+      <h2>Thank you for your responses!</h2>
+      <p>We'll use your answers to provide better career insights.</p>
+
+      <Button
+        onClick={() => {
+          setPopup(false);
+          navigate("/");
+        }}
+        className="mt-3"
+      >
+        Close and Go Home
+      </Button>
+
+      <Button
+        onClick={() => {setPopup(false)
+          navigate("/basic-results")}
+        }
+        className="mt-3 ms-2"
+      >
+        Go to Results
+      </Button>
+      
+    </div>
+  </div>
+)}
 
       <Button onClick={() => navigate("/")}>Go Back to Home</Button>
     </div>

@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./DetailedAssessment.css"; // Import CSS for styling
 import ProgressBar from "./ProgressBar";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 
@@ -18,7 +18,8 @@ const questions = [
 function DetailedAssessment() {
   const navigate = useNavigate();
     const [answers, setAnswers] = useState<{ [key: number]: string }>({});
-  
+    const [showPopup, setPopup] = useState(false);
+
     const handleAnswer = (index: number, answer: string) => {
       setAnswers((prev) => ({ ...prev, [index]: answer }));
     };
@@ -32,7 +33,7 @@ function DetailedAssessment() {
   
         <ProgressBar progress={progress} />
   
-        <form>
+        <Form>
           {questions.map((question, index) => (
             <div key={index} className="question-block">
               <p>{question}</p>
@@ -71,11 +72,45 @@ function DetailedAssessment() {
             </div>
           ))}
   
-          <Button type="submit" className="submit-button">
-            Submit Answers
-          </Button>
-        </form>
-  
+        <Button
+          type="submit"
+          className="submit-button"
+          onClick={(e) => {
+            e.preventDefault(); // Prevents page reload
+            setPopup(true);     // Show popup
+          }}
+        >
+          Submit Answers
+        </Button>
+
+        </Form>
+          {showPopup && (
+            <div className="popup-overlay">
+              <div className="popup-content">
+                <h2>Thank you for your responses!</h2>
+                <p>We'll use your answers to provide better career insights.</p>
+          
+                <Button
+                  onClick={() => {
+                    setPopup(false);
+                    navigate("/");
+                  }}
+                  className="mt-3"
+                >
+                  Close and Go Home
+                </Button>
+          
+                <Button
+                  onClick={() => {setPopup(false)
+                    navigate("/detailed-results")}
+                  }
+                  className="mt-3 ms-2"
+                >
+                  Go to Results
+                </Button>
+              </div>
+            </div>
+          )}
         <Button onClick={() => navigate("/")}>Go Back to Home</Button>
       </div>
     );
