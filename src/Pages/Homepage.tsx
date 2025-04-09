@@ -88,7 +88,7 @@ const HomePage = () => {
         {/* Detailed Questions */}
         <section className="detailed-questions">
           <h2>Detailed Questions</h2>
-          <p>Answer more detailed questions to help you find your ideal career.</p>
+          <p>Answer detailed questions to help you find your ideal career.</p>
           <Button onClick={() => navigate("/detailed-assessment")}>
             Go to Detailed Questions
           </Button>

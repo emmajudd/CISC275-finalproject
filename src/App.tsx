@@ -6,6 +6,7 @@ import './App.css';
 import Homepage from './Pages/Homepage'; // Import Homepage component
 import BasicAssessment from './Components/BasicAssessment';
 import DetailedAssessment from './Components/DetailedAssessment';
+import BasicResults from './Components/BasicResults'
 import Navbar from './Components/Navbar';
 
 
@@ -19,6 +20,8 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/basic-assessment" element={<BasicAssessment />} />
         <Route path="/detailed-assessment" element={<DetailedAssessment />} />
+        <Route path="/basic-results" element={<BasicResults />} />
+        <Route path="/detailed-results" element={<BasicResults />} />
       </Routes>
     </Router>
   
