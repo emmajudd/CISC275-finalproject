@@ -33,7 +33,9 @@ function BasicAssessment() {
   // Calculate progress percentage
   const progress = (Object.keys(answers).length / questions.length) * 100;
 
-  const handlePopup = ()=>{setPopup(true)};
+  const handlePopup = () => {
+    Object.keys(answers).length === questions.length ? setPopup(true) : alert("Please answer all questions");
+  };
 
   return (
     <div className="basic-assessment">
@@ -83,7 +85,8 @@ function BasicAssessment() {
         <Button 
         type="submit" className="submit-button" onClick={(e) => {
           e.preventDefault();
-          handlePopup()}}>
+          Object.keys(answers).length === questions.length ? setPopup(true) : alert("Please answer all questions");
+        }}>
           
           Submit Answers
         </Button>

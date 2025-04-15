@@ -76,8 +76,8 @@ function DetailedAssessment() {
           type="submit"
           className="submit-button"
           onClick={(e) => {
-            e.preventDefault(); // Prevents page reload
-            setPopup(true);     // Show popup
+            e.preventDefault();
+            Object.keys(answers).length === questions.length ? setPopup(true) : alert("Please answer all questions");
           }}
         >
           Submit Answers
