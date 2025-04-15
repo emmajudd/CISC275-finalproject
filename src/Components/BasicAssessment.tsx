@@ -32,10 +32,8 @@ function BasicAssessment() {
 
   // Calculate progress percentage
   const progress = (Object.keys(answers).length / questions.length) * 100;
-
-  const handlePopup = () => {
-    Object.keys(answers).length === questions.length ? setPopup(true) : alert("Please answer all questions");
-  };
+//changed popup to show when all questions are answered
+  
 
   return (
     <div className="basic-assessment">
