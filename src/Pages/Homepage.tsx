@@ -75,25 +75,27 @@ const HomePage = () => {
     <div className="homepage">
       <h1>The Career Helpi</h1>
       
-      <div className="question-container">
-        {/* Basic Questions Section */}
-        <section className="basic-questions">
-          <h2>Basic Questions</h2>
+      {/* Two-Panel Structure */}
+      <div className="panel-container">
+        {/* Basic Questions Panel */}
+        <div className="panel">
+          <h3>Basic Questions</h3>
           <p>Answer basic questions to help you find your ideal career.</p>
           <Button onClick={() => navigate("/basic-assessment")}>
             Go to Basic Questions
           </Button>
-        </section>
+        </div>
         
-        {/* Detailed Questions */}
-        <section className="detailed-questions">
-          <h2>Detailed Questions</h2>
+        {/* Detailed Questions Panel */}
+        <div className="panel">
+          <h3>Detailed Questions</h3>
           <p>Answer detailed questions to help you find your ideal career.</p>
           <Button onClick={() => navigate("/detailed-assessment")}>
             Go to Detailed Questions
           </Button>
-        </section>
+        </div>
       </div>
+
       {/* API Key Form - Only shown on the homepage */}
       <div className="api-key-form">
         <Form>
@@ -130,7 +132,6 @@ const HomePage = () => {
           </div>
         )}
       </div>
-
     </div>
   );
 };
