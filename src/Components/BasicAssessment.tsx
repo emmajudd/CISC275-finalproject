@@ -13,12 +13,12 @@ const questions = [
   "Do you enjoy public speaking more than working behind the scenes?",
   "Do you work well under pressure and strict deadlines?",
   "Is financial success more motivating to you than job stability or making a difference?",
-"Would you choose an intellectually challenging job over one with better work-life balance?",
-"Do you prefer working for a large company over a small startup or being self-employed?",
-"Is job security more important to you than career growth and new opportunities?",
-"Would you enjoy a career that requires frequent travel?",
-"Is creativity essential to your ideal career?",
-"Would you rather work on long-term projects than short-term tasks?",
+  "Would you choose an intellectually challenging job over one with better work-life balance?",
+  "Do you prefer working for a large company over a small startup or being self-employed?",
+  "Is job security more important to you than career growth and new opportunities?",
+  "Would you enjoy a career that requires frequent travel?",
+  "Is creativity essential to your ideal career?",
+  "Would you rather work on long-term projects than short-term tasks?",
 ];
 
 function BasicAssessment() {
@@ -32,8 +32,6 @@ function BasicAssessment() {
 
   // Calculate progress percentage
   const progress = (Object.keys(answers).length / questions.length) * 100;
-//changed popup to show when all questions are answered
-  
 
   return (
     <div className="basic-assessment">
@@ -106,9 +104,10 @@ function BasicAssessment() {
       </Button>
 
       <Button
-        onClick={() => {setPopup(false)
-          navigate("/basic-results")}
-        }
+        onClick={() => {
+          setPopup(false);
+          navigate("/basic-results", { state: { questions, answers } }); // Pass questions and answers to BasicResults
+        }}
         className="mt-3 ms-2"
       >
         Go to Results
@@ -122,7 +121,6 @@ function BasicAssessment() {
     </div>
   );
 };
-
 
 export default BasicAssessment;
 
