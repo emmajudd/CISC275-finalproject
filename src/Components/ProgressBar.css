@@ -15,10 +15,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative; /* Ensure text can be positioned inside the bar */
 }
 
 .progress-text {
-  color: white;
+  position: absolute; /* Position text inside the progress bar */
+  width: 100%; /* Center text horizontally */
+  text-align: center; /* Align text in the center */
+  color: white; /* Ensure text is visible */
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-} 
+}

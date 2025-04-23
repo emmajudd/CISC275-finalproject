@@ -40,7 +40,14 @@ function BasicResults() {
             messages: [
               {
                 role: "system",
-                content: "You are a career advisor. Provide career suggestions based on the user's answers to the following questions. Please list job descriptions, salary, in an organized format. Go in depth for your reasoning based on the answers given. Put it in html format so it looks good on a website.",
+                content: `You are a career advisor. Provide career suggestions based on the user's answers to the following questions. 
+                Format the response in HTML and include inline styles or CSS class names for styling. 
+                Use the following CSS guidelines:
+                - Use a clean and professional layout.
+                - Highlight job titles in bold and larger font sizes.
+                - Use a table for listing job descriptions, salaries, and other details.
+                - Add spacing and padding for readability.
+                - Use colors like rgb(30, 27, 55) for headings and #f0f0f0 for table backgrounds.`,
               },
               {
                 role: "user",

@@ -1,178 +1,191 @@
-/* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    /*
-    box-sizing: border-box;
-    */
-  }
-  
-  /* Full-page styling with gradient */
-  body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e8eaf6, #f5f7fa); /* Soft gradient */
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 100vh; /* Ensures the body takes at least full viewport height */ 
-    height: 100%; /* Ensures that the body can grow if content exceeds viewport */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: auto; /* Enables vertical scrolling */
-    padding: 20px;
-    animation: fadeIn 1s ease-in-out;
-  }
-  
-  /* Page fade-in effect */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Main content wrapper */
-  .homepage {
-    text-align: center;
-    padding: 30px 20px;
-    width: 100%; /* Ensure content stretches across full width */
-    max-width: 1200px;
-    margin-bottom: 20px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Spaced-out heading */
-  h1 {
-    color: blue;
-    font-size: 36px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    letter-spacing: 2px;
-    word-spacing: 4px;
-    padding: 10px 0;
-  }
-  
-  /* Container for planners */
-  .question-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    padding-bottom: 30px;
-    width: 100%; /* Ensure container takes full width */
-    max-width: 1200px; /* Ensure enough space for side-by-side display */
-  }
-  
-  /* Card styles */
-  .basic-questions, .detailed-questions {
-    background: white;
-    border-radius: 12px;
-    padding: 30px;
-    flex-basis: 45%; /* Ensure cards take up 45% of the container width */
-    max-width: 400px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    flex: 1;
-    min-width: 280px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    animation: floatUp 0.8s ease-in-out;
-  }
-  
-  /* Hover effect */
-  .basic-questions:hover {
-    transform: rotate(-2deg) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #fefcea, #f1da36);
-  }
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e8eaf6; /* Light background */
+  color: #333; /* Dark text */
+  margin: 0;
+  padding: 0;
+}
 
-  .detailed-questions:hover {
-    transform: rotate(2deg) scale(1.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #fefcea, #f1da36);
-  }
-  
-  /* Titles inside cards */
-  h2 {
-    color: #27ae60;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  /* Fun Button Styles */
-  button {
-    background: linear-gradient(135deg, #27ae60, #2ecc71);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    margin-top: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 8px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    animation: bounce 2s infinite ease-in-out;
-  }
-  
-  /* Hover effect for buttons */
-  button:hover {
-    transform: scale(1.05);
-    background: linear-gradient(135deg, #f368be, #ff5fe4);
-  }
-  
-  /* Footer Section (to prevent extra space at the bottom) */
-  footer {
-    margin-top: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    width: 100%; /* Ensure it takes full width */
-    position: relative;
-    bottom: 0;
-  }
-  
-  
+/* Homepage Container */
+.homepage {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+}
 
-  
-  /* Ensure responsiveness */
-  @media (max-width: 1024px) {
-    .homepage {
-      padding-top: 70px;
-    }
-  
-    .question-container {
-      gap: 20px;
-    }
-  
-    .basic-questions, .detailed-questions{
-      width: 75%;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .homepage {
-      padding-top: 60px;
-    }
-  
-    .question-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .basic-questions, .detailed-questions {
-      width: 90%;
-      padding: 25px;
-    }
-  
-    .cards-section {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-  
-    .card {
-      width: 90%;
-      padding: 25px;
-    }
-  }
+/* Title Styling */
+.homepage h1 {
+  font-size: 2.5rem;
+  color: #2c3e50; /* Dark blue text */
+  margin-bottom: 20px;
+}
+
+/* Section Styling */
+.homepage .section {
+  margin-bottom: 30px;
+}
+
+.homepage .section h2 {
+  font-size: 1.8rem;
+  color: #2c3e50; /* Dark blue text */
+  margin-bottom: 10px;
+}
+
+.homepage .section p {
+  font-size: 1rem;
+  color: #555; /* Subtle gray text */
+  margin-bottom: 20px;
+}
+
+/* Button Styling */
+.homepage .section .button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #2c3e50; /* Dark blue background */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.homepage .section .button:hover {
+  background-color: #00bcd4; /* Bright blue hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.homepage .section .button:active {
+  transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+/* API Key Form Styling */
+.api-key-form {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.api-key-form label {
+  font-size: 1rem;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.api-key-form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.api-key-form .submit-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #2c3e50; /* Dark blue background */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.api-key-form .submit-button:hover {
+  background-color: #00bcd4; /* Bright blue hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.api-key-form .submit-button:active {
+  transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+/* Two-Panel Structure */
+.homepage .panel-container {
+  display: flex;
+  justify-content: space-between; /* Space between panels */
+  align-items: stretch; /* Ensure panels are the same height */
+  gap: 20px; /* Add spacing between panels */
+  margin-top: 40px;
+}
+
+.homepage .panel {
+  flex: 1; /* Panels take equal width */
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.homepage .panel:hover {
+  transform: rotateY(10deg); /* Slight tilt effect */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  background-color: #f0f4ff; /* Light blue highlight */
+}
+
+.homepage .panel h3 {
+  font-size: 1.5rem;
+  color: #2c3e50; /* Dark blue text */
+  margin-bottom: 10px;
+}
+
+.homepage .panel p {
+  font-size: 1rem;
+  color: #555; /* Subtle gray text */
+}
+
+.homepage .panel .button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #2c3e50; /* Dark blue background */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.homepage .panel .button:hover {
+  background-color: #00bcd4; /* Bright blue hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.homepage .panel .button:active {
+  transform: scale(0.95); /* Slight shrink effect on click */
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd; /* Light gray background */
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  background-color: #2c3e50; /* Dark blue progress */
+  transition: width 0.3s ease; /* Smooth transition for progress updates */
+}
