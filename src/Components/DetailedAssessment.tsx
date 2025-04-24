@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
-import "./DetailedAssessment.css"; // Import CSS for styling
+import "./DetailedAssessment.css"; // Import custom CSS for layout and styling
+import ProgressBar from "./ProgressBar"; // Import custom ProgressBar component
 
+// Array of career assessment questions
 const questions = [
   "What are your long-term career goals?",
   "What motivates you to perform well in a job?",
@@ -17,41 +19,53 @@ const questions = [
 ];
 
 function DetailedAssessment() {
-  const navigate = useNavigate();
-  const [answers, setAnswers] = useState<{ [key: number]: string }>({});
-  const [showPopup, setPopup] = useState(false);
+  const navigate = useNavigate(); // Hook to navigate between pages
+  const [answers, setAnswers] = useState<{ [key: number]: string }>({}); // Track answers to each question by index
+  const [showPopup, setPopup] = useState(false); // Control visibility of the completion popup
 
+  // Update the answer for a specific question when user types
   const handleAnswer = (index: number, answer: string) => {
     setAnswers((prev) => ({ ...prev, [index]: answer }));
   };
+
+  // Count how many answers are "complete" (i.e., more than 3 characters)
+  const completedAnswers = Object.values(answers).filter((ans) => ans.trim().length > 3).length;
+
+  // Calculate progress as a percentage of completed questions
+  const progress = (completedAnswers / questions.length) * 100;
 
   return (
     <div className="detailed-assessment">
       <h1>Detailed Career Assessment</h1>
 
+      {/* Display the progress bar */}
+      <ProgressBar progress={progress} />
+
       <Form>
+        {/* Render each question with a corresponding text area for answers */}
         {questions.map((question, index) => (
           <div key={index} className="question-block">
             <p>{question}</p>
             <Form.Control
               as="textarea"
               rows={3}
-              value={answers[index] || ""}
-              onChange={(e) => handleAnswer(index, e.target.value)}
+              value={answers[index] || ""} // Default to empty string if no answer yet
+              onChange={(e) => handleAnswer(index, e.target.value)} // Handle input changes
               placeholder="Type your answer here..."
             />
           </div>
         ))}
 
+        {/* Submit button triggers validation and potentially shows the popup */}
         <Button
           type="submit"
           className="submit-button"
           onClick={(e) => {
-            e.preventDefault();
+            e.preventDefault(); // Prevent default form submission
             if (Object.keys(answers).length === questions.length) {
-              setPopup(true);
+              setPopup(true); // Show thank-you popup if all questions are answered
             } else {
-              alert("Please answer all questions.");
+              alert("Please answer all questions."); // Alert if not all answered
             }
           }}
         >
@@ -59,15 +73,18 @@ function DetailedAssessment() {
         </Button>
       </Form>
 
+      {/* Popup shown after submission is complete */}
       {showPopup && (
         <div className="popup-overlay">
           <div className="popup-content">
             <h2>Thank you for your responses!</h2>
             <p>We'll use your answers to provide better career insights.</p>
+
+            {/* Button to navigate to the results page, passing data via router state */}
             <Button
               onClick={() => {
-                setPopup(false);
-                navigate("/detailed-results", { state: { questions, answers } });
+                setPopup(false); // Hide popup
+                navigate("/detailed-results", { state: { questions, answers } }); // Navigate to results page
               }}
               className="mt-3"
             >
@@ -81,6 +98,3 @@ function DetailedAssessment() {
 }
 
 export default DetailedAssessment;
-
-
-

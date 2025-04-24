@@ -4,25 +4,21 @@
   background-color: #f0f0f0;
   border-radius: 5px;
   margin: 20px 0;
-  overflow: hidden;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 .progress-bar {
   height: 100%;
+  width: 100%; /* Default width, should be controlled via JS or inline style */
   background: linear-gradient(90deg, #4CAF50, #45a049);
   transition: width 0.3s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative; /* Ensure text can be positioned inside the bar */
 }
 
 .progress-text {
   position: absolute; /* Position text inside the progress bar */
   width: 100%; /* Center text horizontally */
   text-align: center; /* Align text in the center */
-  color: white; /* Ensure text is visible */
+  color: rgb(0, 0, 0); /* Ensure text is visible */
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }

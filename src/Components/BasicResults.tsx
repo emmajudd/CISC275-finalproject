@@ -1,24 +1,34 @@
-// BasicResults.tsx
-import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
+import React, { useEffect, useState } from "react"; 
+import { useLocation, useNavigate } from "react-router-dom"; // For accessing route state and navigation
+import axios from "axios"; // HTTP client for API requests
 
 function BasicResults() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { answers, questions } = location.state || {}; // Retrieve answers and questions from state
-  const [chatResponse, setChatResponse] = useState<string>(""); // State for ChatGPT response
-  const [loading, setLoading] = useState<boolean>(true); // State to track loading
+  const location = useLocation(); // Hook to access the current location (and its state)
+  const navigate = useNavigate(); // Hook for programmatic navigation
 
+  // Destructure answers and questions from location.state, or default to undefined
+  const { answers, questions } = location.state || {};
+
+  // State for storing the ChatGPT API response
+  const [chatResponse, setChatResponse] = useState<string>("");
+
+  // State for indicating if the API request is still in progress
+  const [loading, setLoading] = useState<boolean>(true);
+
+  // useEffect runs once on component mount
   useEffect(() => {
+    // If required data is missing, redirect back to the basic assessment page
     if (!answers || !questions) {
       console.error("State is missing. Redirecting to BasicAssessment.");
       navigate("/basic-assessment");
       return;
     }
 
+    // Async function to handle the API call to ChatGPT
     async function fetchChatGPTResponse() {
-      const apiKey = localStorage.getItem("MYKEY");
+      const apiKey = localStorage.getItem("MYKEY"); // Retrieve API key from localStorage
+
+      // If API key is missing, show an alert and redirect user
       if (!apiKey) {
         alert("API key is missing. Please set it on the homepage.");
         navigate("/basic-assessment");
@@ -26,17 +36,21 @@ function BasicResults() {
       }
 
       try {
-        // Format the input for ChatGPT
+        // Format input for the ChatGPT prompt
         const formattedInput = questions
-          .map((question: string, index: number) => `${question}: ${answers[index] || "No answer provided"}`)
+          .map(
+            (question: string, index: number) =>
+              `${question}: ${answers[index] || "No answer provided"}`
+          )
           .join("\n");
 
-        console.log("Formatted Input for ChatGPT:", formattedInput); // Debugging: Log formatted input
+        console.log("Formatted Input for ChatGPT:", formattedInput); // Debug log
 
+        // Send POST request to ChatGPT with structured prompt
         const response = await axios.post(
           "https://api.openai.com/v1/chat/completions",
           {
-            model: "gpt-3.5-turbo",
+            model: "gpt-3.5-turbo", // Specify the model to use
             messages: [
               {
                 role: "system",
@@ -54,44 +68,57 @@ function BasicResults() {
                 content: `Here are the user's answers:\n${formattedInput}`,
               },
             ],
-            max_tokens: 1500, // Increased max tokens for detailed output
+            max_tokens: 1500, // Allow more tokens for detailed output
           },
           {
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${JSON.parse(apiKey)}`, // Use the API key
+              Authorization: `Bearer ${JSON.parse(apiKey)}`, // Secure authorization header
             },
           }
         );
 
-        console.log("ChatGPT API Response:", response.data); // Log the full API response
+        console.log("ChatGPT API Response:", response.data); // Debug log full API response
 
-        const chatGPTOutput = (response.data as { choices: { message: { content: string } }[] }).choices[0]?.message?.content.trim() || "No response received.";
-        console.log("ChatGPT Output:", chatGPTOutput); // Debugging: Log ChatGPT output
-        setChatResponse(chatGPTOutput);
+        // Extract the response text from the returned data structure
+        const chatGPTOutput =
+          (
+            response.data as {
+              choices: { message: { content: string } }[];
+            }
+          ).choices[0]?.message?.content.trim() || "No response received.";
+
+        console.log("ChatGPT Output:", chatGPTOutput); // Debug log response output
+        setChatResponse(chatGPTOutput); // Save response to state
       } catch (error: any) {
+        // Log and notify the user of any error
         console.error("Error fetching results:", error.response || error.message);
         alert("Failed to fetch results from ChatGPT.");
       } finally {
-        setLoading(false); // Stop loading
+        setLoading(false); // Mark loading as complete
       }
     }
 
-    fetchChatGPTResponse();
-  }, [answers, questions, navigate]);
+    fetchChatGPTResponse(); // Call the async function
+  }, [answers, questions, navigate]); // Dependencies: re-run only if any of these change
 
+  // If answers/questions are missing, show a redirecting message (though navigate should already trigger)
   if (!answers || !questions) {
-    return <p>Redirecting...</p>; // Show a message while redirecting
+    return <p>Redirecting...</p>;
   }
 
+  // Show a loading message while waiting for API response
   if (loading) {
-    return <p>Loading your career suggestions...</p>; // Show a loading message while waiting for ChatGPT response
+    return <p>Loading your career suggestions...</p>;
   }
 
+  // Render final results once loaded
   return (
     <div className="results-page">
       <h1>Your Career Assessment Results</h1>
       <p>Thanks for completing the assessment! Here are your answers:</p>
+
+      {/* Display user answers */}
       <div className="user-answers">
         <ul>
           {questions.map((question: string, index: number) => (
@@ -101,9 +128,11 @@ function BasicResults() {
           ))}
         </ul>
       </div>
+
+      {/* Display ChatGPT-generated career advice */}
       <div className="chat-response">
         <h3>Career Suggestions:</h3>
-        {/* Render ChatGPT's HTML response */}
+        {/* Inject HTML content returned from ChatGPT safely */}
         <div dangerouslySetInnerHTML={{ __html: chatResponse }} />
       </div>
     </div>

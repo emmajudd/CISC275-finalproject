@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import "./BasicAssessment.css"; // Import CSS for styling
-import { useNavigate } from "react-router-dom";
-import { Button, Form } from "react-bootstrap";
-import ProgressBar from "./ProgressBar";
+import "./BasicAssessment.css"; // Import CSS for styling the component
+import { useNavigate } from "react-router-dom"; // Hook to navigate between routes
+import { Button, Form } from "react-bootstrap"; // Import Bootstrap components
+import ProgressBar from "./ProgressBar"; // Custom ProgressBar component
 
+// Array of career-oriented yes/no/maybe style questions
 const questions = [
   "Do you have a skill that others often struggle with but comes naturally to you?",
   "Do you prefer following instructions exactly rather than figuring things out on your own?",
@@ -22,28 +23,36 @@ const questions = [
 ];
 
 function BasicAssessment() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hook for navigating to different routes
+
+  // Store answers in a key-value pair where key = question index, value = selected answer
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
+
+  // Control the visibility of the popup that appears on successful submission
   const [showPopup, setPopup] = useState(false);
 
+  // Updates the answer for a given question
   const handleAnswer = (index: number, answer: string) => {
     setAnswers((prev) => ({ ...prev, [index]: answer }));
   };
 
-  // Calculate progress percentage
+  // Calculate how much of the assessment has been completed (as a percentage)
   const progress = (Object.keys(answers).length / questions.length) * 100;
 
   return (
     <div className="basic-assessment">
       <h1>Basic Career Assessment</h1>
-      
+
+      {/* Show progress bar based on number of questions answered */}
       <ProgressBar progress={progress} />
 
+      {/* Render the questions in a form with radio options */}
       <Form>
         {questions.map((question, index) => (
           <div key={index} className="question-block">
             <p>{question}</p>
             <div className="answer-options">
+              {/* Radio button for "Yes" */}
               <label>
                 <input
                   type="radio"
@@ -54,6 +63,8 @@ function BasicAssessment() {
                 />
                 Yes
               </label>
+
+              {/* Radio button for "No" */}
               <label>
                 <input
                   type="radio"
@@ -64,6 +75,8 @@ function BasicAssessment() {
                 />
                 No
               </label>
+
+              {/* Radio button for "Neither" */}
               <label>
                 <input
                   type="radio"
@@ -78,49 +91,57 @@ function BasicAssessment() {
           </div>
         ))}
 
-        <Button 
-        type="submit" className="submit-button" onClick={(e) => {
-          e.preventDefault();
-          Object.keys(answers).length === questions.length ? setPopup(true) : alert("Please answer all questions");
-        }}>
-          
+        {/* Submit button - validates that all questions are answered before showing popup */}
+        <Button
+          type="submit"
+          className="submit-button"
+          onClick={(e) => {
+            e.preventDefault();
+            Object.keys(answers).length === questions.length
+              ? setPopup(true)
+              : alert("Please answer all questions");
+          }}
+        >
           Submit Answers
         </Button>
       </Form>
+
+      {/* Popup shown after submission with navigation options */}
       {showPopup && (
-  <div className="popup-overlay">
-    <div className="popup-content">
-      <h2>Thank you for your responses!</h2>
-      <p>We'll use your answers to provide better career insights.</p>
+        <div className="popup-overlay">
+          <div className="popup-content">
+            <h2>Thank you for your responses!</h2>
+            <p>We'll use your answers to provide better career insights.</p>
 
-      <Button
-        onClick={() => {
-          setPopup(false);
-          navigate("/");
-        }}
-        className="mt-3"
-      >
-        Close and Go Home
-      </Button>
+            {/* Button to close popup and return to home */}
+            <Button
+              onClick={() => {
+                setPopup(false);
+                navigate("/");
+              }}
+              className="mt-3"
+            >
+              Close and Go Home
+            </Button>
 
-      <Button
-        onClick={() => {
-          setPopup(false);
-          navigate("/basic-results", { state: { questions, answers } }); // Pass questions and answers to BasicResults
-        }}
-        className="mt-3 ms-2"
-      >
-        Go to Results
-      </Button>
-      
-    </div>
-  </div>
-)}
+            {/* Button to view the results page, passing answers and questions as state */}
+            <Button
+              onClick={() => {
+                setPopup(false);
+                navigate("/basic-results", { state: { questions, answers } });
+              }}
+              className="mt-3 ms-2"
+            >
+              Go to Results
+            </Button>
+          </div>
+        </div>
+      )}
 
+      {/* Additional navigation button to return to homepage */}
       <Button onClick={() => navigate("/")}>Go Back to Home</Button>
     </div>
   );
-};
+}
 
 export default BasicAssessment;
-
