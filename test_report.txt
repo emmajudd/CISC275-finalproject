@@ -38,7 +38,7 @@ All files                |       0 |        0 |       0 |       0 |
   BasicAssessment.tsx    |       0 |        0 |       0 |       0 | 8-142             
   BasicQuestions.tsx     |       0 |        0 |       0 |       0 | 6-58              
   BasicResults.tsx       |       0 |        0 |       0 |       0 | 6-125             
-  DetailedAssessment.tsx |       0 |        0 |       0 |       0 | 8-87              
+  DetailedAssessment.tsx |       0 |        0 |       0 |       0 | 8-97              
   DetailedResults.tsx    |       0 |        0 |       0 |       0 | 6-101             
   Navbar.tsx             |       0 |      100 |       0 |       0 | 5-6               
   ProgressBar.tsx        |       0 |      100 |       0 |       0 | 8-11              
@@ -48,5 +48,5 @@ All files                |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.644 s
+Time:        2.59 s
 Ran all test suites.
