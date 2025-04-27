@@ -73,3 +73,11 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
+  .popup-content .ms-2 {
+    margin-top: 15px;
+  }
+.popup-content .mt-3 {
+  margin-left: 10px;
+}
+  
+

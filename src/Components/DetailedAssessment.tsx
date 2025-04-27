@@ -83,10 +83,20 @@ function DetailedAssessment() {
             {/* Button to navigate to the results page, passing data via router state */}
             <Button
               onClick={() => {
+                setPopup(false);
+                navigate("/");
+              }}
+              className="mt-3"
+            >
+              Close and Go Home
+            </Button>
+            {/* Button to navigate to the results page, passing data via router state */}
+            <Button
+              onClick={() => {
                 setPopup(false); // Hide popup
                 navigate("/detailed-results", { state: { questions, answers } }); // Navigate to results page
               }}
-              className="mt-3"
+              className="mt-3 ms-2"
             >
               Go to Results
             </Button>
