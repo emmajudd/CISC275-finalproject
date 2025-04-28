@@ -28,8 +28,8 @@ function DetailedAssessment() {
     setAnswers((prev) => ({ ...prev, [index]: answer }));
   };
 
-  // Count how many answers are "complete" (i.e., more than 3 characters)
-  const completedAnswers = Object.values(answers).filter((ans) => ans.trim().length > 3).length;
+  // Count how many answers are "complete" (i.e., more than 10 characters)
+  const completedAnswers = Object.values(answers).filter((ans) => ans.trim().length > 10).length;
 
   // Calculate progress as a percentage of completed questions
   const progress = (completedAnswers / questions.length) * 100;
@@ -51,7 +51,7 @@ function DetailedAssessment() {
               rows={3}
               value={answers[index] || ""} // Default to empty string if no answer yet
               onChange={(e) => handleAnswer(index, e.target.value)} // Handle input changes
-              placeholder="Type your answer here..."
+              placeholder="Type your complete answer"
             />
           </div>
         ))}
@@ -65,7 +65,7 @@ function DetailedAssessment() {
             if (Object.keys(answers).length === questions.length) {
               setPopup(true); // Show thank-you popup if all questions are answered
             } else {
-              alert("Please answer all questions."); // Alert if not all answered
+              alert("Please answer all questions with more than ten characters."); // Alert if not all answered
             }
           }}
         >
