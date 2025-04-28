@@ -29,7 +29,7 @@ function DetailedAssessment() {
   };
 
   // Count how many answers are "complete" (i.e., more than 10 characters)
-  const completedAnswers = Object.values(answers).filter((ans) => ans.trim().length > 10).length;
+  const completedAnswers = Object.values(answers).filter((ans) => ans.trim().length > 9).length;
 
   // Calculate progress as a percentage of completed questions
   const progress = (completedAnswers / questions.length) * 100;
@@ -44,18 +44,19 @@ function DetailedAssessment() {
       <Form>
         {/* Render each question with a corresponding text area for answers */}
         {questions.map((question, index) => (
-          <div key={index} className="question-block">
-            <p>{question}</p>
-            <Form.Control
-              as="textarea"
-              rows={3}
-              value={answers[index] || ""} // Default to empty string if no answer yet
-              onChange={(e) => handleAnswer(index, e.target.value)} // Handle input changes
-              placeholder="Type your complete answer"
-            />
-          </div>
-        ))}
-
+         <div key={index} className="question-block">
+           <p>{question}</p>
+           <Form.Control
+             as="textarea"
+             rows={3}
+             maxLength={200}
+             value={answers[index] || ""} // Default to empty string if no answer yet
+             onChange={(e) => handleAnswer(index, e.target.value)} // Handle input changes
+             placeholder="Type your answer here..."
+           />
+           <p>Please fill character limit {answers[index]?.length || 0} / 10</p>
+         </div>
+       ))}
         {/* Submit button triggers validation and potentially shows the popup */}
         <Button
           type="submit"
