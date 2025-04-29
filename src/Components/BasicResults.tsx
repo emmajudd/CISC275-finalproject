@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"; 
 import { useLocation, useNavigate } from "react-router-dom"; // For accessing route state and navigation
 import axios from "axios"; // HTTP client for API requests
+import loading from '../Assets/loading.gif'; // Loading GIF for user feedback
 
 function BasicResults() {
   const location = useLocation(); // Hook to access the current location (and its state)
@@ -13,7 +14,7 @@ function BasicResults() {
   const [chatResponse, setChatResponse] = useState<string>("");
 
   // State for indicating if the API request is still in progress
-  const [loading, setLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // useEffect runs once on component mount
   useEffect(() => {
@@ -97,7 +98,7 @@ function BasicResults() {
         console.error("Error fetching results:", error.response || error.message);
         alert("Failed to fetch results from ChatGPT.");
       } finally {
-        setLoading(false); // Mark loading as complete
+        setIsLoading(false); // Mark loading as complete
       }
     }
 
@@ -109,9 +110,25 @@ function BasicResults() {
     return <p>Redirecting...</p>;
   }
 
-  // Show a loading message while waiting for API response
-  if (loading) {
-    return <p>Loading your career suggestions...</p>;
+  // Show a loading message whxile waiting for API response
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <img
+          src={loading}
+          alt="Loading..."
+          className="loading-gif"
+          style={{ width: "100px", height: "100px" }} // Adjust size here
+        />
+      </div>
+    );
   }
 
   // Render final results once loaded
