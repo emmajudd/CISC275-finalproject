@@ -1,9 +1,8 @@
-import { useLocation, useNavigate } from "react-router-dom";
+
 import "./ContactPage.css";
 
 function ContactPage() {
-  const location = useLocation(); // Hook to access the current location (and its state)
-  const navigate = useNavigate();
+  
   return (
     <div className="contact-container">
       <h1>Contact the Group</h1>
