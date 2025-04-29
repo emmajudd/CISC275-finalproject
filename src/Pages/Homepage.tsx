@@ -19,6 +19,8 @@ const HomePage = () => {
   const [key, setKey] = useState<string>(keyData);
   const [userInput, setUserInput] = useState<string>(""); // State for user input
   const [chatResponse, setChatResponse] = useState<string>(""); // State for ChatGPT response
+  const [isLoading, setIsLoading] = useState<boolean>(false); // For loading
+
 
     //sets the local storage item to the api key the user inputed
   function handleSubmit() {
@@ -37,6 +39,21 @@ const HomePage = () => {
       alert("Please provide a valid API key.");
       return;
     }
+  
+    const trimmedInput = userInput.trim();
+  
+    // Validation checks
+    if (trimmedInput.length === 0) {
+      alert("Please enter a message before sending.");
+      return;
+    }
+  
+    if (trimmedInput.length < 10) {
+      alert("Please enter a more detailed message (at least 10 characters).");
+      return;
+    }
+
+    setIsLoading(true); // Disable submit button to avoid double submissions
 
     try {
       const response = await axios.post(
@@ -68,6 +85,9 @@ const HomePage = () => {
           error.response?.data?.error?.message || error.message
         }`
       );
+    }
+      finally {
+        setIsLoading(false);
     }
   }
 
@@ -124,7 +144,11 @@ const HomePage = () => {
             onChange={(e) => setUserInput(e.target.value)}
           />
           <br />
-          <Button onClick={handleChatSubmit}>Send</Button>
+          {/* This makes sure that the send button is grayed out/disabled while checking if the formatting is valid */}
+          <Button onClick={handleChatSubmit} disabled={isLoading}>
+             {isLoading ? "Sending..." : "Send"}  
+          </Button>
+
         </Form>
         {chatResponse && (
           <div className="chat-response">
