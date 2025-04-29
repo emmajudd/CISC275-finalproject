@@ -61,7 +61,9 @@ function BasicResults() {
                 - Highlight job titles in bold and larger font sizes.
                 - Use a table for listing job descriptions, salaries, and other details.
                 - Add spacing and padding for readability.
-                - Use colors like rgb(30, 27, 55) for headings and #f0f0f0 for table backgrounds.`,
+                - Use colors like rgb(30, 27, 55) for headings and #f0f0f0 for table backgrounds.
+                - Go in-depth on requirements and responsibilities.
+                - Provide a summary of the user's strengths and how they relate to the suggested careers.`,
               },
               {
                 role: "user",
