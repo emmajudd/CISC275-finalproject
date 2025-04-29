@@ -11,12 +11,12 @@ FAIL src/App.test.tsx
       src/App.tsx
       src/App.test.tsx
 
-      1 | //import React from 'react';
+      1 |
     > 2 | import { HashRouter as Router, Routes, Route } from 'react-router-dom';
         | ^
-      3 | //import logo from './logo.svg';
+      3 |
       4 | import './App.css';
-      5 | //import { Form, Button } from 'react-bootstrap';
+      5 |
 
       at Resolver.resolveModule (node_modules/jest-resolve/build/resolver.js:324:11)
       at Object.<anonymous> (src/App.tsx:2:1)
@@ -31,13 +31,14 @@ File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Li
 -------------------------|---------|----------|---------|---------|-------------------
 All files                |       0 |        0 |       0 |       0 |                   
  src                     |       0 |        0 |       0 |       0 |                   
-  App.tsx                |       0 |      100 |       0 |       0 | 15                
+  App.tsx                |       0 |      100 |       0 |       0 | 16                
   index.tsx              |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts     |       0 |        0 |       0 |       0 | 3-10              
  src/Components          |       0 |        0 |       0 |       0 |                   
   BasicAssessment.tsx    |       0 |        0 |       0 |       0 | 8-142             
   BasicQuestions.tsx     |       0 |        0 |       0 |       0 | 6-58              
   BasicResults.tsx       |       0 |        0 |       0 |       0 | 7-144             
+  ContactPage.tsx        |       0 |      100 |       0 |       0 | 6                 
   DetailedAssessment.tsx |       0 |        0 |       0 |       0 | 8-98              
   DetailedResults.tsx    |       0 |        0 |       0 |       0 | 7-113             
   Navbar.tsx             |       0 |      100 |       0 |       0 | 5-6               
@@ -48,5 +49,5 @@ All files                |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.64 s
+Time:        2.655 s
 Ran all test suites.
