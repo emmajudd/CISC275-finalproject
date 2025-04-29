@@ -1,8 +1,8 @@
-//import React from 'react';
+
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-//import logo from './logo.svg';
+
 import './App.css';
-//import { Form, Button } from 'react-bootstrap';
+
 import Homepage from './Pages/Homepage'; // Import Homepage component
 import BasicAssessment from './Components/BasicAssessment';
 import DetailedAssessment from './Components/DetailedAssessment';
