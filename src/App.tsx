@@ -8,6 +8,7 @@ import BasicAssessment from './Components/BasicAssessment';
 import DetailedAssessment from './Components/DetailedAssessment';
 import BasicResults from './Components/BasicResults'
 import Navbar from './Components/Navbar';
+import ContactPage from './Components/ContactPage';
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/detailed-assessment" element={<DetailedAssessment />} />
         <Route path="/basic-results" element={<BasicResults />} />
         <Route path="/detailed-results" element={<BasicResults />} />
+        <Route path="/contact-page" element={<ContactPage />} />
       </Routes>
     </Router>
   
