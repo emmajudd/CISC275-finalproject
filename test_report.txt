@@ -43,10 +43,10 @@ All files                |       0 |        0 |       0 |       0 |
   Navbar.tsx             |       0 |      100 |       0 |       0 | 5-6               
   ProgressBar.tsx        |       0 |      100 |       0 |       0 | 8-11              
  src/Pages               |       0 |        0 |       0 |       0 |                   
-  Homepage.tsx           |       0 |        0 |       0 |       0 | 8-123             
+  Homepage.tsx           |       0 |        0 |       0 |       0 | 8-124             
 -------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.56 s
+Time:        2.621 s
 Ran all test suites.
