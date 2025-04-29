@@ -114,7 +114,8 @@ const HomePage = () => {
       </div>
 
       <div className="chatgpt-container">
-        <h2>Chat with Career Helper</h2>
+        <h2>Chat with Career Helper
+        </h2>
         <Form>
           <Form.Control
             type="text"
