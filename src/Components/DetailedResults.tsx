@@ -1,33 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import loading from '../Assets/loading.gif'; // Loading GIF for user feedback
 
 function DetailedResults() {
-  const location = useLocation(); // Access navigation state passed from previous page
-  const navigate = useNavigate(); // Navigation hook for redirects
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  // Destructure answers and questions from router state (sent from DetailedAssessment)
   const { answers, questions } = location.state || {};
-
-  // State to store ChatGPT response
   const [chatResponse, setChatResponse] = useState<string>("");
-
-  // Loading indicator while waiting for response
-  const [loading, setLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    // Redirect to assessment page if state is missing (when user refreshes or lands directly)
     if (!answers || !questions) {
       console.error("State is missing. Redirecting to DetailedAssessment.");
       navigate("/detailed-assessment");
       return;
     }
 
-    // Fetch GPT-generated career advice based on user's answers
     async function fetchChatGPTResponse() {
-      const apiKey = localStorage.getItem("MYKEY"); // Retrieve stored OpenAI API key
+      const apiKey = localStorage.getItem("MYKEY");
 
-      // If no key, show alert and redirect
       if (!apiKey) {
         alert("API key is missing. Please set it on the homepage.");
         navigate("/detailed-assessment");
@@ -35,75 +28,85 @@ function DetailedResults() {
       }
 
       try {
-        // Combine questions and corresponding answers into a formatted string
         const formattedInput = questions
-          .map((question: string, index: number) => `${question}: ${answers[index] || "No answer provided"}`)
+          .map(
+            (question: string, index: number) =>
+              `${question}: ${answers[index] || "No answer provided"}`
+          )
           .join("\n");
 
-        // Send request to OpenAI's chat API
         const response = await axios.post(
           "https://api.openai.com/v1/chat/completions",
           {
-            model: "gpt-3.5-turbo", // Specify model
+            model: "gpt-3.5-turbo",
             messages: [
               {
                 role: "system",
-                content: `You are a career advisor. Provide career suggestions based on the user's answers to the following questions. 
-                Format the response in HTML and include inline styles or CSS class names for styling. 
-                Use the following CSS guidelines:
-                - Use a clean and professional layout.
-                - Highlight job titles in bold and larger font sizes.
-                - Use a table for listing job descriptions, salaries, and other details.
-                - Add spacing and padding for readability.
-                - Use colors like rgb(30, 27, 55) for headings and #f0f0f0 for table backgrounds.
-                - Go in-depth on requirements and responsibilities.
-                - Provide a summary of the user's strengths and how they relate to the suggested careers.`,
+                content: `You are a career advisor. Provide detailed career suggestions based on the user's answers.`,
               },
               {
                 role: "user",
-                content: `Here are the user's answers:\n${formattedInput}`, // Send formatted answers as user message
+                content: `Here are the user's answers:\n${formattedInput}`,
               },
             ],
-            max_tokens: 1500, // Limit response length
+            max_tokens: 1500,
           },
           {
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${JSON.parse(apiKey)}`, // Attach API key
+              Authorization: `Bearer ${JSON.parse(apiKey)}`,
             },
           }
         );
 
-        // Extract the returned content from ChatGPT's response
-        const chatGPTOutput = (response.data as { choices: { message: { content: string } }[] }).choices[0]?.message?.content.trim() || "No response received.";
-        setChatResponse(chatGPTOutput); // Store the output in state
+        const chatGPTOutput =
+          (
+            response.data as {
+              choices: { message: { content: string } }[];
+            }
+          ).choices[0]?.message?.content.trim() || "No response received.";
+
+        setChatResponse(chatGPTOutput);
       } catch (error: any) {
         console.error("Error fetching results:", error.response || error.message);
-        alert("Failed to fetch results from ChatGPT."); // Error handling
+        alert("Failed to fetch results from ChatGPT.");
       } finally {
-        setLoading(false); // Hide loading message after attempt
+        setIsLoading(false);
       }
     }
 
-    fetchChatGPTResponse(); // Trigger the async call when component mounts
+    fetchChatGPTResponse();
   }, [answers, questions, navigate]);
 
-  // If answers or questions are still undefined, show a placeholder
   if (!answers || !questions) {
     return <p>Redirecting...</p>;
   }
 
-  // Show loading message while awaiting API response
-  if (loading) {
-    return <p>Loading your career suggestions...</p>;
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "100vh",
+        }}
+      >
+        <img
+          src={loading}
+          alt="Loading..."
+          className="loading-gif"
+          style={{ width: "100px", height: "100px" }}
+        />
+      </div>
+    );
   }
 
   return (
     <div className="results-page">
       <h1>Your Detailed Career Assessment Results</h1>
-      <p>Thanks for completing the assessment! Here are your answers:</p>
+      <p>Thanks for completing the detailed assessment! Here are your answers:</p>
 
-      {/* Display each question along with the user's answer */}
       <div className="user-answers">
         <ul>
           {questions.map((question: string, index: number) => (
@@ -114,7 +117,6 @@ function DetailedResults() {
         </ul>
       </div>
 
-      {/* Render the GPT-generated HTML response as raw HTML */}
       <div className="chat-response">
         <h3>Career Suggestions:</h3>
         <div dangerouslySetInnerHTML={{ __html: chatResponse }} />
