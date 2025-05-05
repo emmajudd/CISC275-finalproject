@@ -1,4 +1,4 @@
-
+import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
@@ -13,10 +13,16 @@ import ContactPage from './Components/ContactPage';
 
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.className = darkMode ? "dark-mode" : "";
+  }, [darkMode]);
+
   return (
     <div>
     <Router>
-      <Navbar /> 
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} /> 
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/basic-assessment" element={<BasicAssessment />} />

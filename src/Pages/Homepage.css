@@ -7,6 +7,56 @@ body {
   padding: 0;
 }
 
+body.dark-mode {
+  background-color: #181818;
+  color: #f1f1f1;
+}
+
+body.dark-mode .homepage {
+  background-color: #232323;
+  color: #f1f1f1;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .homepage h1,
+body.dark-mode .homepage .section h2 {
+  color: #e0e6f7;
+}
+
+body.dark-mode .homepage .panel {
+  background-color: #292929;
+  color: #f1f1f1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+body.dark-mode .api-key-form,
+body.dark-mode .chatgpt-container {
+  background-color: #292929;
+  color: #f1f1f1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+body.dark-mode .api-key-form input,
+body.dark-mode .chatgpt-container input {
+  background: #232323;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+body.dark-mode .api-key-form input:focus,
+body.dark-mode .chatgpt-container input:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 5px #00bcd4;
+}
+
+body.dark-mode .homepage .panel h3 {
+  color: #fff;
+}
+
+body.dark-mode .progress-text {
+  color: #fff !important;
+}
+
 /* Homepage Container */
 .homepage {
   max-width: 1200px;

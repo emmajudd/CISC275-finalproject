@@ -133,7 +133,7 @@ function BasicResults() {
 
   // Render final results once loaded
   return (
-    <div className="results-page">
+    <div className="results-container">
       <h1>Your Career Assessment Results</h1>
       <p>Thanks for completing the assessment! Here are your answers:</p>
 
