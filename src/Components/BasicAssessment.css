@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+body.dark-mode .basic-assessment h1 {
+  color: #fff;
+}
+
 /* Basic Assessment Container */
 .basic-assessment {
   max-width: 800px;

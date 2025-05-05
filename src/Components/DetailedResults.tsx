@@ -103,7 +103,7 @@ function DetailedResults() {
   }
 
   return (
-    <div className="results-page">
+    <div className="results-container">
       <h1>Your Detailed Career Assessment Results</h1>
       <p>Thanks for completing the detailed assessment! Here are your answers:</p>
 

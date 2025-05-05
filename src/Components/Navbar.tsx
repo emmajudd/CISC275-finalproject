@@ -2,7 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"; // Import CSS for styling
 
-const Navbar = () => {
+interface NavbarProps {
+  darkMode: boolean;
+  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   return (
     <nav className="navbar">
       <div className="logo">Career Helper</div>
@@ -20,6 +25,12 @@ const Navbar = () => {
           <Link to ="/contact-page">Contact Page</Link>
         </li>
       </ul>
+      <button
+        onClick={() => setDarkMode((prev) => !prev)}
+        className="theme-toggle-btn"
+      >
+        {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
     </nav>
   );
 };

@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body.dark-mode {
+  background: #181818;
+  color: #f1f1f1;
+}
+
+body.dark-mode .contact-container,
+body.dark-mode .basic-assessment,
+body.dark-mode .detailed-assessment {
+  background: #232323;
+  color: #f1f1f1;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .contact-card {
+  background: #292929;
+  color: #f1f1f1;
+}
+
+body.dark-mode .progress-container {
+  background: #333;
+}
+
+body.dark-mode .progress-bar {
+  background: linear-gradient(90deg, #2e8b57, #145a32);
+}
+
+.theme-toggle-btn {
+  margin-left: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  border: none;
+  background: #eee;
+  color: #222;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+body.dark-mode .theme-toggle-btn {
+  background: #444;
+  color: #f1f1f1;
+}
