@@ -35,16 +35,16 @@ All files                |       0 |        0 |       0 |       0 |
   index.tsx              |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts     |       0 |        0 |       0 |       0 | 3-10              
  src/Components          |       0 |        0 |       0 |       0 |                   
-  BasicAssessment.tsx    |       0 |        0 |       0 |       0 | 11-171            
+  BasicAssessment.tsx    |       0 |        0 |       0 |       0 | 9-160             
   BasicQuestions.tsx     |       0 |        0 |       0 |       0 | 6-58              
   BasicResults.tsx       |       0 |        0 |       0 |       0 | 10-164            
   ContactPage.tsx        |       0 |      100 |       0 |       0 | 6                 
   DetailedAssessment.tsx |       0 |        0 |       0 |       0 | 9-104             
   DetailedResults.tsx    |       0 |        0 |       0 |       0 | 7-114             
-  Navbar.tsx             |       0 |        0 |       0 |       0 | 10-29             
+  Navbar.tsx             |       0 |        0 |       0 |       0 | 12-31             
   ProgressBar.tsx        |       0 |      100 |       0 |       0 | 8-11              
  src/Pages               |       0 |        0 |       0 |       0 |                   
-  Homepage.tsx           |       0 |        0 |       0 |       0 | 8-144             
+  Homepage.tsx           |       0 |        0 |       0 |       0 | 9-158             
 -------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       0 total
