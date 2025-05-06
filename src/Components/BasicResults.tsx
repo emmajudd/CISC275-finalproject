@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom"; // For accessing route state and navigation
 import axios from "axios"; // HTTP client for API requests
 import loading from '../Assets/loading.gif'; // Loading GIF for user feedback
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+//import jsPDF from 'jspdf';
+//import html2canvas from 'html2canvas';
 import { useRef } from 'react';
 
 
@@ -22,6 +22,7 @@ function BasicResults() {
 
   const pdfRef = useRef(null);
 
+  /*
 const handleDownloadPDF = async () => {
   if (!pdfRef.current) return;
 
@@ -37,7 +38,7 @@ const handleDownloadPDF = async () => {
   pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
   pdf.save('career-assessment-results.pdf');
 };
-
+*/
 
   // useEffect runs once on component mount
   useEffect(() => {
@@ -116,6 +117,7 @@ const handleDownloadPDF = async () => {
 
         console.log("ChatGPT Output:", chatGPTOutput); // Debug log response output
         setChatResponse(chatGPTOutput); // Save response to state
+        
       } catch (error: any) {
         // Log and notify the user of any error
         console.error("Error fetching results:", error.response || error.message);
@@ -178,9 +180,11 @@ const handleDownloadPDF = async () => {
         <div className="chat-response">
           <div dangerouslySetInnerHTML={{ __html: chatResponse }} />
         </div>
-        <button onClick={handleDownloadPDF} style={{ marginBottom: '20px' }}>
-        Download as PDF
-      </button>
+        {/*<button onClick={handleDownloadPDF} style={{ marginBottom: '20px' }}>*/}
+        
+        <button onClick={() => window.print() }>Download PDF </button>
+
+        
       </div>
     </div>
   );
