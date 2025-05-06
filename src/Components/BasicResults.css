@@ -41,11 +41,85 @@ body.dark-mode .results-container h1,
 body.dark-mode .results-container h3 {
   color: #e75480 !important;
 }
+
 body.dark-mode .results-container table th {
   background-color: #e75480 !important;
   color: #fff !important;
 }
+
 body.dark-mode .chat-response {
   background-color: #e75480 !important;
   color: #fff !important;
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Hide the download button during print */
+  .download-btn {
+    display: none;
+  }
+
+  /* Hide the navigation bar during print */
+  .navbar {
+    display: none !important;
+  }
+
+  /* Ensure that the entire results container is printed */
+  .results-container {
+    color: black !important;
+    background: white !important;
+    width: 100%;
+    page-break-before: always; /* Ensures the container starts a new page */
+  }
+
+  /* Prevent any truncation by forcing page breaks where necessary */
+  .results-container h1,
+  .results-container h3,
+  .results-container p {
+    page-break-after: avoid; /* Avoid breaking after headings and paragraphs */
+    page-break-inside: avoid; /* Avoid breaking inside these elements */
+  }
+
+  .results-container table {
+    width: 100%;
+    page-break-inside: auto; /* Allow the table to break across pages if needed */
+  }
+
+  .results-container table th,
+  .results-container table td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  /* Optional: remove all dark mode overrides */
+  .dark-mode * {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Ensure text is fully visible and doesn't overflow */
+  .results-container * {
+    display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Specifically target the career suggestions container if it exists */
+  .career-suggestions {
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* Ensure that page breaks occur properly between sections */
+  .career-suggestions,
+  .career-results {
+    page-break-before: always;
+  }
 }
