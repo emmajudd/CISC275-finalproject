@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom"; // For accessing route state and navigation
 import axios from "axios"; // HTTP client for API requests
 import loading from '../Assets/loading.gif'; // Loading GIF for user feedback
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
+import { useRef } from 'react';
+
 
 function BasicResults() {
   const location = useLocation(); // Hook to access the current location (and its state)
@@ -15,6 +19,25 @@ function BasicResults() {
 
   // State for indicating if the API request is still in progress
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const pdfRef = useRef(null);
+
+const handleDownloadPDF = async () => {
+  if (!pdfRef.current) return;
+
+  const element = pdfRef.current as HTMLElement;
+  const canvas = await html2canvas(element);
+  const imgData = canvas.toDataURL('image/png');
+  const pdf = new jsPDF('p', 'mm', 'a4');
+
+  const imgProps = pdf.getImageProperties(imgData);
+  const pdfWidth = pdf.internal.pageSize.getWidth();
+  const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+  pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+  pdf.save('career-assessment-results.pdf');
+};
+
 
   // useEffect runs once on component mount
   useEffect(() => {
@@ -134,25 +157,30 @@ function BasicResults() {
   // Render final results once loaded
   return (
     <div className="results-container">
-      <h1>Your Career Assessment Results</h1>
-      <p>Thanks for completing the assessment! Here are your answers:</p>
-
-      {/* Display user answers */}
-      <div className="user-answers">
-        <ul>
-          {questions.map((question: string, index: number) => (
-            <li key={index}>
-              <strong>{question}</strong>: {answers[index] || "No answer provided"}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Display ChatGPT-generated career advice */}
-      <div className="chat-response">
-        <h3>Career Suggestions:</h3>
-        {/* Inject HTML content returned from ChatGPT safely */}
-        <div dangerouslySetInnerHTML={{ __html: chatResponse }} />
+     
+  
+      <div ref={pdfRef}>
+        <h1>Your Career Assessment Results</h1>
+        <p>Thanks for completing the assessment! Here are your answers:</p>
+  
+        {/* Display user answers */}
+        <div className="user-answers">
+          <ul>
+            {questions.map((question: string, index: number) => (
+              <li key={index}>
+                <strong>{question}</strong>: {answers[index] || "No answer provided"}
+              </li>
+            ))}
+          </ul>
+        </div>
+  
+        {/* Display ChatGPT-generated career advice */}
+        <div className="chat-response">
+          <div dangerouslySetInnerHTML={{ __html: chatResponse }} />
+        </div>
+        <button onClick={handleDownloadPDF} style={{ marginBottom: '20px' }}>
+        Download as PDF
+      </button>
       </div>
     </div>
   );

@@ -5,11 +5,11 @@
 }
 
 .results-container h1 {
-  color: #e75480;
+  color: #333;
 }
 
 .results-container h3 {
-  color: #e75480;
+  color: #333;
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
@@ -29,7 +29,7 @@
 }
 
 .results-container table th {
-  background-color: #e75480;
+  background-color: #333;
   color: white;
 }
 
@@ -42,6 +42,10 @@ body.dark-mode .results-container h3 {
   color: #e75480 !important;
 }
 body.dark-mode .results-container table th {
+  background-color: #e75480 !important;
+  color: #fff !important;
+}
+body.dark-mode .chat-response {
   background-color: #e75480 !important;
   color: #fff !important;
 }

@@ -42,4 +42,9 @@
   font-size: 0.98em;
   word-break: break-all;
 }
+text .darkmode .contact-email {
+  color: #fef9f9;
+  font-size: 0.98em;
+  word-break: break-all;
+}
 
