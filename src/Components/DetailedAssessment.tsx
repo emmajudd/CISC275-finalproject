@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
 import "./DetailedAssessment.css"; // Import custom CSS for layout and styling
 import ProgressBar from "./ProgressBar"; // Import custom ProgressBar component
+import confetti from 'canvas-confetti';
 
 // Array of career assessment questions
 const questions = [
@@ -64,7 +65,12 @@ function DetailedAssessment() {
           onClick={(e) => {
             e.preventDefault(); // Prevent default form submission
             if (Object.keys(answers).length === questions.length) {
-              setPopup(true); // Show thank-you popup if all questions are answered
+              setPopup(true);
+              confetti({
+                              particleCount: 350,
+                              spread: 70,
+                              origin: { y: 0.6 },
+                            }); // Show thank-you popup if all questions are answered
             } else {
               alert("Please answer all questions with more than ten characters."); // Alert if not all answered
             }

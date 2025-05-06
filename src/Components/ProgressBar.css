@@ -1,16 +1,15 @@
-.progress-container {
-  width: 100%;
-  height: 20px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  margin: 20px 0;
-  position: sticky;
-  top: 0;
-  
-  
-  z-index: 1000;
-}
 
+.progress-container {
+    position: sticky;
+    top: 60px; /* Equal to the navbar height */
+    width: 100%;
+    height: 17px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    z-index: 999; /* Below navbar (z-index: 1000) */
+}
+  
+  
 .progress-bar {
   height: 100%;
   width: 100%; /* Default width, should be controlled via JS or inline style */
