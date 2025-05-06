@@ -1,8 +1,11 @@
+
 import React, { useState } from "react";
 import "./BasicAssessment.css"; // Import CSS for styling the component
 import { useNavigate } from "react-router-dom"; // Hook to navigate between routes
 import { Button, Form } from "react-bootstrap"; // Import Bootstrap components
 import ProgressBar from "./ProgressBar"; // Custom ProgressBar component
+import confetti from 'canvas-confetti';
+
 
 // Array of career-oriented yes/no/maybe style questions
 const questions = [
@@ -22,29 +25,37 @@ const questions = [
   "Would you rather work on long-term projects than short-term tasks?",
 ];
 
+
 function BasicAssessment() {
   const navigate = useNavigate(); // Hook for navigating to different routes
+
 
   // Store answers in a key-value pair where key = question index, value = selected answer
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
 
+
   // Control the visibility of the popup that appears on successful submission
   const [showPopup, setPopup] = useState(false);
+
 
   // Updates the answer for a given question
   const handleAnswer = (index: number, answer: string) => {
     setAnswers((prev) => ({ ...prev, [index]: answer }));
   };
 
+
   // Calculate how much of the assessment has been completed (as a percentage)
   const progress = (Object.keys(answers).length / questions.length) * 100;
+
 
   return (
     <div className="basic-assessment">
       <h1>Basic Career Assessment</h1>
 
+
       {/* Show progress bar based on number of questions answered */}
       <ProgressBar progress={progress} />
+
 
       {/* Render the questions in a form with radio options */}
       <Form>
@@ -64,6 +75,7 @@ function BasicAssessment() {
                 Yes
               </label>
 
+
               {/* Radio button for "No" */}
               <label>
                 <input
@@ -75,6 +87,7 @@ function BasicAssessment() {
                 />
                 No
               </label>
+
 
               {/* Radio button for "Neither" */}
               <label>
@@ -90,6 +103,8 @@ function BasicAssessment() {
             </div>
           </div>
         ))}
+         
+
 
         {/* Submit button - validates that all questions are answered before showing popup */}
         <Button
@@ -97,14 +112,25 @@ function BasicAssessment() {
           className="submit-button"
           onClick={(e) => {
             e.preventDefault();
-            Object.keys(answers).length === questions.length
-              ? setPopup(true)
-              : alert("Please answer all questions");
+            if (Object.keys(answers).length === questions.length) {
+              setPopup(true);
+              // 🎉 Trigger confetti here
+              confetti({
+                particleCount: 350,
+                spread: 70,
+                origin: { y: 0.6 },
+              });
+            } else {
+              alert("Please answer all questions");
+            }
           }}
         >
           Submit Answers
         </Button>
+
+
       </Form>
+
 
       {/* Popup shown after submission with navigation options */}
       {showPopup && (
@@ -112,6 +138,7 @@ function BasicAssessment() {
           <div className="popup-content">
             <h2>Thank you for your responses!</h2>
             <p>We'll use your answers to provide better career insights.</p>
+
 
             {/* Button to close popup and return to home */}
             <Button
@@ -123,6 +150,7 @@ function BasicAssessment() {
             >
               Close and Go Home
             </Button>
+
 
             {/* Button to view the results page, passing answers and questions as state */}
             <Button
@@ -138,10 +166,15 @@ function BasicAssessment() {
         </div>
       )}
 
+
       {/* Additional navigation button to return to homepage */}
       <Button onClick={() => navigate("/")}>Go Back to Home</Button>
     </div>
   );
 }
 
+
 export default BasicAssessment;
+
+
+
