@@ -2,9 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import loading from '../Assets/loading.gif'; // Loading GIF for user feedback
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
-import { useRef } from 'react';
 
 function DetailedResults() {
   const location = useLocation();
@@ -14,23 +11,6 @@ function DetailedResults() {
   const [chatResponse, setChatResponse] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
-  const pdfRef = useRef(null);
-
-const handleDownloadPDF = async () => {
-  if (!pdfRef.current) return;
-
-  const element = pdfRef.current as HTMLElement;
-  const canvas = await html2canvas(element);
-  const imgData = canvas.toDataURL('image/png');
-  const pdf = new jsPDF('p', 'mm', 'a4');
-
-  const imgProps = pdf.getImageProperties(imgData);
-  const pdfWidth = pdf.internal.pageSize.getWidth();
-  const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-  pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-  pdf.save('career-assessment-results.pdf');
-};
 
   useEffect(() => {
     if (!answers || !questions) {
@@ -142,9 +122,7 @@ const handleDownloadPDF = async () => {
         <h3>Career Suggestions:</h3>
         <div dangerouslySetInnerHTML={{ __html: chatResponse }} />
       
-        <button onClick={handleDownloadPDF} style={{ marginBottom: '20px' }}>
-        Download as PDF
-      </button>
+        
       </div>
     </div>
   );

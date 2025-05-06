@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom"; // For accessing route state and navigation
 import axios from "axios"; // HTTP client for API requests
 import loading from '../Assets/loading.gif'; // Loading GIF for user feedback
-//import jsPDF from 'jspdf';
-//import html2canvas from 'html2canvas';
 import { useRef } from 'react';
+
 
 
 function BasicResults() {
@@ -21,25 +20,7 @@ function BasicResults() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const pdfRef = useRef(null);
-
-  /*
-const handleDownloadPDF = async () => {
-  if (!pdfRef.current) return;
-
-  const element = pdfRef.current as HTMLElement;
-  const canvas = await html2canvas(element);
-  const imgData = canvas.toDataURL('image/png');
-  const pdf = new jsPDF('p', 'mm', 'a4');
-
-  const imgProps = pdf.getImageProperties(imgData);
-  const pdfWidth = pdf.internal.pageSize.getWidth();
-  const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
-
-  pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-  pdf.save('career-assessment-results.pdf');
-};
-*/
-
+  
   // useEffect runs once on component mount
   useEffect(() => {
     // If required data is missing, redirect back to the basic assessment page
@@ -159,8 +140,6 @@ const handleDownloadPDF = async () => {
   // Render final results once loaded
   return (
     <div className="results-container">
-     
-  
       <div ref={pdfRef}>
         <h1>Your Career Assessment Results</h1>
         <p>Thanks for completing the assessment! Here are your answers:</p>
@@ -181,9 +160,9 @@ const handleDownloadPDF = async () => {
           <div dangerouslySetInnerHTML={{ __html: chatResponse }} />
         </div>
         {/*<button onClick={handleDownloadPDF} style={{ marginBottom: '20px' }}>*/}
-        
+        <div className="download-btn">
         <button onClick={() => window.print() }>Download PDF </button>
-
+        </div>
         
       </div>
     </div>
