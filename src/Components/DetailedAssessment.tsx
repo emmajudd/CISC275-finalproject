@@ -54,7 +54,7 @@ function DetailedAssessment() {
              onChange={(e) => handleAnswer(index, e.target.value)} // Handle input changes
              placeholder="Type your answer here..."
            />
-           <p>Please fill character limit {answers[index]?.length || 0} / 10</p>
+           <p>Please fill character limit {answers[index]?.trim().length || 0} / 10</p>
          </div>
        ))}
         {/* Submit button triggers validation and potentially shows the popup */}

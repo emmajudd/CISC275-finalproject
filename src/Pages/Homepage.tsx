@@ -119,7 +119,7 @@ const HomePage = () => {
       {/* API Key Form - Only shown on the homepage */}
       <div className="api-key-form">
         <Form>
-          <Form.Label>API Key:</Form.Label>
+          <h3>API Key:</h3>
           <Form.Control
             type="password"
             placeholder="Insert API Key Here"
