@@ -1,163 +1,175 @@
 /* General Styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   background-color: #e8eaf6; /* Light background */
   color: #333; /* Dark text */
   margin: 0;
   padding: 0;
-}
-
-body.dark-mode {
+ }
+ 
+ 
+ body.dark-mode {
   background-color: #181818;
   color: #f1f1f1;
-}
-
-body.dark-mode .homepage {
+ }
+ 
+ 
+ body.dark-mode .homepage {
   background-color: #232323;
   color: #f1f1f1;
   box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-}
-
-body.dark-mode .homepage h1,
-body.dark-mode .homepage .section h2 {
-  color: #e0e6f7;
-}
-
-body.dark-mode .homepage .panel  {
+ }
+ 
+ 
+ body.dark-mode .homepage h1,
+ body.dark-mode .homepage .section h2 {
+  color: #f9f9fb;
+ }
+ 
+ 
+ body.dark-mode .homepage .panel  {
   background-color: #292929;
   color: #080808;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
-
-
-body.dark-mode .api-key-form,
-body.dark-mode .chatgpt-container {
+ }
+ 
+ 
+ body.dark-mode .api-key-form,
+ body.dark-mode .chatgpt-container {
   background-color: #292929;
   color: #f1f1f1;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-}
-
-body.dark-mode .api-key-form input,
-body.dark-mode .chatgpt-container input {
+ }
+ 
+ 
+ body.dark-mode .api-key-form input,
+ body.dark-mode .chatgpt-container input {
   background: #232323;
   color: #f1f1f1;
   border: 1px solid #444;
-}
-
-body.dark-mode .api-key-form input:focus,
-body.dark-mode .chatgpt-container input:focus {
-  border-color: #00bcd4;
-  box-shadow: 0 0 5px #00bcd4;
-}
-
-body.dark-mode .homepage .panel h3 {
+ }
+ 
+ 
+ body.dark-mode .api-key-form input:focus,
+ body.dark-mode .chatgpt-container input:focus {
+  border-color: #fddeda;
+  box-shadow: 0 0 5px #fddeda;
+ }
+ 
+ 
+ body.dark-mode .homepage .panel h3 {
   color: #fff;
-}
-
-body.dark-mode .progress-text {
+ }
+ body.dark-mode .homepage .panel p {
+  color: #fff;
+ }
+ 
+ 
+ body.dark-mode .progress-text {
   color: #fff !important;
-}
-
-/* Homepage Container */
-.homepage {
+ }
+ 
+ 
+ /* Homepage Container */
+ .homepage {
   max-width: 1200px;
   margin: 20px auto;
   padding: 20px;
   background-color: #ffffff; /* White background */
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow:#fddeda; /* Subtle shadow */
   text-align: center;
-}
-
-/* Title Styling */
-.homepage h1 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: monospace;
+ }
+ 
+ 
+ /* Title Styling */
+ .homepage h1 {
+  font-family: monospace;
   font-size: 2.5rem;
   color: #2c3e50; /* Dark blue text */
   margin-bottom: 20px;
-}
-
-/* Section Styling */
-.homepage .section {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ 
+ 
+ /* Section Styling */
+ .homepage .section {
+  font-family: monospace;
   margin-bottom: 30px;
-}
-
-.homepage .section h2 {
+ }
+ 
+ 
+ .homepage .section h2 {
   font-size: 1.8rem;
+  font-family: monospace;
   color: #2c3e50; /* Dark blue text */
   margin-bottom: 10px;
-}
-
-.homepage .section p {
+ }
+ 
+ 
+ .homepage .section p {
   font-size: 1rem;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: monospace;
   color: #555; /* Subtle gray text */
   margin-bottom: 20px;
-}
-
-/* Button Styling */
-.homepage .section .button {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: #2c3e50; /* Dark blue background */
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  text-decoration: none;
-}
-
-.homepage .section .button:hover {
-  background-color: #00bcd4; /* Bright blue hover */
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-.homepage .section .button:active {
-  transform: scale(0.95); /* Slight shrink effect on click */
-}
-
-/* API Key Form Styling */
-.api-key-form {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ 
+ 
+ /* Button Styling */
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* API Key Form Styling */
+ .api-key-form {
+  font-family: monospace;
   margin-top: 30px;
   padding: 20px;
   background-color: #f9f9f9; /* Light gray background */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.api-key-form label {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 2rem;
+ }
+ 
+ 
+ .api-key-form h3 {
+  font-family: monospace;
+  font-size: 1.5rem;
   color: #333;
   display: block;
+   box-shadow: #fddeda;
   margin-bottom: 10px;
-}
-
-.api-key-form input {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ .dark-mode .api-key-form h3 {
+  color: #f1f1f1;
+ 
+ 
+ }
+ .api-key-form input {
+  font-family: monospace;
   width: 100%;
   padding: 10px;
-  font-size: 1rem;
+  font-size: .75rem;
   border: 1px solid #ddd;
   border-radius: 20px;
   margin-bottom: 20px;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  box-shadow: #fddeda;
+  /* Smooth transition */
   outline: none; /* Remove default outline */
-}
-
-.api-key-form input:focus {
-  border-color: #2c3e50; /* Dark blue border on focus */
+ }
+ 
+ 
+ .api-key-form input:focus {
+  border-color: #fddeda; /* Dark blue border on focus */
   box-shadow: 0 0 5px rgba(44, 62, 80, 0.5); /* Subtle shadow on focus */
-}
-
-.api-key-form .submit-button {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ 
+ 
+ .api-key-form .submit-button {
+  font-family: monospace;
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
@@ -168,54 +180,64 @@ body.dark-mode .progress-text {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.api-key-form .submit-button:hover {
+ }
+ 
+ 
+ .api-key-form .submit-button:hover {
   background-color: #00bcd4; /* Bright blue hover */
   transform: scale(1.05); /* Slight zoom effect */
-}
-
-.api-key-form .submit-button:active {
+ }
+ 
+ 
+ .api-key-form .submit-button:active {
   transform: scale(0.95); /* Slight shrink effect on click */
-}
-
-/* ChatGPT Container Styling */
-.chatgpt-container {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ 
+ 
+ /* ChatGPT Container Styling */
+ .chatgpt-container {
+  font-family: monospace;
   margin-top: 30px;
   padding: 20px;
   background-color: #f9f9f9; /* Light gray background */
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.chatgpt-container label {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 2rem;
+ }
+ 
+ 
+ .chatgpt-container h2 {
+  font-family: monospace;
+  font-size: 1.5rem;
   color: #333;
   display: block;
   margin-bottom: 10px;
-}
-
-.chatgpt-container input {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ .dark-mode .chatgpt-container h2 {
+  color: #f1f1f1;
+ }
+ 
+ 
+ .chatgpt-container input {
+  font-family: monospace;
   width: 100%;
   padding: 10px;
-  font-size: 1rem;
+  font-size: .75rem;
   border: 1px solid #ddd;
   border-radius: 20px;
   margin-bottom: 20px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   outline: none; /* Remove default outline */
-}
-
-.chatgpt-container input:focus {
-  border-color: #2c3e50; /* Dark blue border on focus */
+ }
+ 
+ 
+ .chatgpt-container input:focus {
+  border-color: #fddeda; /* Dark blue border on focus */
   box-shadow: 0 0 5px rgba(44, 62, 80, 0.5); /* Subtle shadow on focus */
-}
-
-.chatgpt-container .submit-button {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ 
+ 
+ .chatgpt-container .submit-button {
+  font-family: monospace;
   display: inline-block;
   padding: 10px 20px;
   font-size: 1rem;
@@ -226,29 +248,32 @@ body.dark-mode .progress-text {
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.chatgpt-container .submit-button:hover {
+ }
+ 
+ 
+ .chatgpt-container .submit-button:hover {
   background-color: #00bcd4; /* Bright blue hover */
   transform: scale(1.05); /* Slight zoom effect */
-}
-
-.chatgpt-container .submit-button:active {
+ }
+ 
+ 
+ .chatgpt-container .submit-button:active {
   transform: scale(0.95); /* Slight shrink effect on click */
-}
-
-/* Two-Panel Structure */
-.homepage .panel-container {
+ }
+ 
+ 
+ /* Two-Panel Structure */
+ .homepage .panel-container {
   display: flex;
   justify-content: space-between; /* Space between panels */
   align-items: stretch; /* Ensure panels are the same height */
   gap: 20px; /* Add spacing between panels */
   margin-top: 40px;
-}
-
-.homepage .panel {
+ }
+ 
+ 
+ .homepage .panel {
   flex: 1; /* Panels take equal width */
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding: 20px;
   background-color: #ffffff; /* White background */
   border-radius: 8px;
@@ -256,27 +281,34 @@ body.dark-mode .progress-text {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
-}
-
-.homepage .panel:hover {
+ }
+ 
+ 
+ 
+ 
+ .homepage .panel:hover {
   transform: rotateY(10deg); /* Slight tilt effect */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
   background-color: #f0f4ff; /* Light blue highlight */
-}
-
-.homepage .panel h3 {
-  font-size: 1.5rem;
+ }
+ 
+ 
+ .homepage .panel h3 {
+  font-size: 1.2rem;
   color: #2c3e50; /* Dark blue text */
   margin-bottom: 10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.homepage .panel p {
-  font-size: 1rem;
+  font-family: monospace;
+ }
+ 
+ 
+ .homepage .panel p {
+  font-size: 0.75rem;
   color: #555; /* Subtle gray text */
-}
-
-.homepage .panel .button {
+  font-family: monospace;
+ }
+ 
+ 
+ .homepage .panel .button {
   display: inline-block;
   margin-top: 15px;
   padding: 10px 20px;
@@ -289,29 +321,71 @@ body.dark-mode .progress-text {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-decoration: none;
-}
-
-.homepage .panel .button:hover {
+ }
+ 
+ 
+ .homepage .panel .button:hover {
   background-color: #00bcd4; /* Bright blue hover */
   transform: scale(1.05); /* Slight zoom effect */
-}
-
-.homepage .panel .button:active {
+ }
+ 
+ 
+ .homepage .panel .button:active {
   transform: scale(0.95); /* Slight shrink effect on click */
-}
-
-/* Progress Bar Styling */
-.progress-bar {
+ }
+ 
+ 
+ /* Progress Bar Styling */
+ .progress-bar {
   width: 100%;
   height: 10px;
   background-color: #ddd; /* Light gray background */
   border-radius: 5px;
   overflow: hidden;
   margin: 10px 0;
-}
-
-.progress-bar .progress {
+ }
+ 
+ 
+ .progress-bar .progress {
   height: 100%;
   background-color: #2c3e50; /* Dark blue progress */
   transition: width 0.3s ease; /* Smooth transition for progress updates */
-}
+ }
+ 
+ 
+ 
+ 
+ .pinky-button {
+  align-items: center;
+  color: #111;
+  font-family: monospace;
+  background-color: #fddeda;
+  border: 2px solid #010101;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 12px;
+  height: 48px;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+ }
+ 
+ 
+ .pinky-button:hover {
+  background-color: #fbb1c8;
+  color: #111;
+  transform: scale(1.05);
+  border: 2px solid #010101;
+ }
+ 
+ 
+ .button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+ }
+ 
+ 
