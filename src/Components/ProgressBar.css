@@ -1,7 +1,7 @@
 
 .progress-container {
     position: sticky;
-    top: 60px; /* Equal to the navbar height */
+    top: 75px; /* Equal to the navbar height */
     width: 100%;
     height: 17px;
     background-color: #f0f0f0;
