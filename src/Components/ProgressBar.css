@@ -13,7 +13,7 @@
 .progress-bar {
   height: 100%;
   width: 100%; /* Default width, should be controlled via JS or inline style */
-  background: linear-gradient(90deg, #4CAF50, #45a049);
+  background: linear-gradient(90deg, #f89c90, #fddeda);
   transition: width 0.3s ease-in-out;
 }
 
@@ -24,4 +24,11 @@
   color: rgb(0, 0, 0); /* Ensure text is visible */
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .progress-bar {
+  height: 100%;
+  width: 100%; /* Default width, should be controlled via JS or inline style */
+  background: linear-gradient(90deg, #f89c90, #fddeda);
+  transition: width 0.3s ease-in-out;
 }

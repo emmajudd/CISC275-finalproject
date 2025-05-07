@@ -1,11 +1,22 @@
-.basic-assessment {
+.detailed-assessment {
     max-width: 600px;
     margin: auto;
     text-align: center;
   }
+
+  .question-text {
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
   
-  .question-block {
-    margin-bottom: 20px;
+  .char-min {
+    font-weight: normal;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 4px;
   }
   
   .answer-options {
@@ -32,23 +43,30 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
   
-  button.selected {
-    background: #007bff;
-    color: white;
-    border-color: #0056b3;
-  }
-  
+
   .submit-button {
-    margin-top: 20px;
-    padding: 10px;
-    background: #28a745;
-    color: white;
-    border: none;
+    font-family: monospace;
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #010101;
+    background-color: #fddeda; 
+    border: 2px solid #010101;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
   }
+   
   
   .submit-button:hover {
-    background: #218838;
+    background-color: #fbb1c8; 
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  .submit-button:active {
+    transform: scale(0.95); /* Slight shrink effect on click */
   }
   .popup-overlay {
     position: fixed;
