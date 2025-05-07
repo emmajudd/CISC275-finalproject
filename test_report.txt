@@ -37,7 +37,7 @@ All files                |       0 |        0 |       0 |       0 |
  src/Components          |       0 |        0 |       0 |       0 |                   
   BasicAssessment.tsx    |       0 |        0 |       0 |       0 | 10-170            
   BasicQuestions.tsx     |       0 |        0 |       0 |       0 | 6-58              
-  BasicResults.tsx       |       0 |        0 |       0 |       0 | 10-164            
+  BasicResults.tsx       |       0 |        0 |       0 |       0 | 10-173            
   ContactPage.tsx        |       0 |      100 |       0 |       0 | 6                 
   DetailedAssessment.tsx |       0 |        0 |       0 |       0 | 9-104             
   DetailedResults.tsx    |       0 |        0 |       0 |       0 | 7-114             
@@ -49,5 +49,5 @@ All files                |       0 |        0 |       0 |       0 |
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.735 s
+Time:        2.639 s
 Ran all test suites.
