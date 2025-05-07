@@ -15,11 +15,21 @@
   }
   
   button {
-    padding: 10px 20px;
-    border: 2px solid #333;
-    background: rgb(219, 105, 230);
-    cursor: pointer;
-    
+    align-items: center;
+  color: #111;
+  font-family: monospace;
+  background-color: #fddeda;
+  border: 2px solid #010101;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 12px;
+  height: 48px;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
   
   button.selected {
