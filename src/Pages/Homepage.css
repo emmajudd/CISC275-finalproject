@@ -114,16 +114,6 @@ body {
   margin-bottom: 20px;
  }
  
- 
- /* Button Styling */
- 
- 
- 
- 
- 
- 
- 
- 
  /* API Key Form Styling */
  .api-key-form {
   font-family: monospace;
@@ -221,7 +211,7 @@ body {
   font-family: monospace;
   width: 100%;
   padding: 10px;
-  font-size: .75rem;
+  font-size: .8rem;
   border: 1px solid #ddd;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -294,7 +284,7 @@ body {
  
  
  .homepage .panel h3 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #2c3e50; /* Dark blue text */
   margin-bottom: 10px;
   font-family: monospace;
@@ -302,7 +292,7 @@ body {
  
  
  .homepage .panel p {
-  font-size: 0.75rem;
+  font-size: .95rem;
   color: #555; /* Subtle gray text */
   font-family: monospace;
  }
@@ -348,7 +338,7 @@ body {
   text-align: center;
   border-radius: 8px;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 17px;
   height: 48px;
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;

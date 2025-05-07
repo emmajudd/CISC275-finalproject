@@ -65,9 +65,18 @@ function BasicResults() {
                 Use the following CSS guidelines:
                 - Use a clean and professional layout.
                 - Highlight job titles in bold and larger font sizes.
-                - Use a table for listing job descriptions, salaries, and other details.
+                - List job descriptions, salaries, and other details.
                 - Add spacing and padding for readability.
-                - Use colors like rgb(30, 27, 55) for headings and #f0f0f0 for table backgrounds.
+                  Light Mode Colors:
+                  - Page background: rgb(255, 255, 255)
+                  - Headings: rgb(247, 200, 194)
+                  -Font Color: rgb(0, 0, 0)
+
+                  Dark Mode Colors:
+                  - Page background: rgb(116, 103, 103)
+                  - Headings: rgb(247, 200, 194)
+                  - Font color: rgb(255, 255, 255)
+                  
                 - Go in-depth on requirements and responsibilities.
                 - Provide a summary of the user's strengths and how they relate to the suggested careers.`,
               },
@@ -139,7 +148,7 @@ function BasicResults() {
 
   // Render final results once loaded
   return (
-    <div className="results-container">
+    <div className="results-container" style={{ paddingTop: "70px" }}>
       <div ref={pdfRef}>
         <h1>Your Career Assessment Results</h1>
         <p>Thanks for completing the assessment! Here are your answers:</p>
