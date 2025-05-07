@@ -46,7 +46,7 @@ function DetailedAssessment() {
         {/* Render each question with a corresponding text area for answers */}
         {questions.map((question, index) => (
          <div key={index} className="question-block">
-           <p>{question}</p>
+           <p className="question-text">{question}</p>
            <Form.Control
              as="textarea"
              rows={3}
@@ -55,7 +55,7 @@ function DetailedAssessment() {
              onChange={(e) => handleAnswer(index, e.target.value)} // Handle input changes
              placeholder="Type your answer here..."
            />
-           <p>Please fill character limit {answers[index]?.trim().length || 0} / 10</p>
+           <p className="char-min">character minimum {answers[index]?.trim().length || 0} / 10</p>
          </div>
        ))}
         {/* Submit button triggers validation and potentially shows the popup */}

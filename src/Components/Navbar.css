@@ -27,7 +27,7 @@ z-index: 1000; /* Ensure it stays above other elements */
 display: flex;
 justify-content: space-between;
 align-items: center;
-background-color: #fddeda; /* Dark blue background */
+background-color: #fddeda;
 padding: 10px 20px;
 color: white;
 font-family: 'Arial', sans-serif;
