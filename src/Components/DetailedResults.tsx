@@ -121,8 +121,6 @@ function DetailedResults() {
       <div className="chat-response">
         <h3>Career Suggestions:</h3>
         <div dangerouslySetInnerHTML={{ __html: chatResponse }} />
-      
-        
       </div>
     </div>
   );

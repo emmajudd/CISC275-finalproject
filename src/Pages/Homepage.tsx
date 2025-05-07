@@ -119,7 +119,7 @@ const HomePage = () => {
        {/* Detailed Questions Panel */}
        <div className="panel">
          <h3>Detailed Questions</h3>
-         <p>Answer detailed questions to help you find your ideal career.</p>
+         <p>Answer detailed open response questions to help you find your ideal career.</p>
          <div className="button-container">
          <Button className="pinky-button" onClick={() => navigate("/detailed-assessment")}>
            Go to Detailed Questions
