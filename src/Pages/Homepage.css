@@ -21,8 +21,7 @@ body {
  }
  
  
- body.dark-mode .homepage h1,
- body.dark-mode .homepage .section h2 {
+ body.dark-mode .homepage h1 {
   color: #f9f9fb;
  }
  
@@ -92,28 +91,6 @@ body {
  }
  
  
- /* Section Styling */
- .homepage .section {
-  font-family: monospace;
-  margin-bottom: 30px;
- }
- 
- 
- .homepage .section h2 {
-  font-size: 1.8rem;
-  font-family: monospace;
-  color: #2c3e50; /* Dark blue text */
-  margin-bottom: 10px;
- }
- 
- 
- .homepage .section p {
-  font-size: 1rem;
-  font-family: monospace;
-  color: #555; /* Subtle gray text */
-  margin-bottom: 20px;
- }
- 
  /* API Key Form Styling */
  .api-key-form {
   font-family: monospace;
@@ -135,8 +112,7 @@ body {
  }
  .dark-mode .api-key-form h3 {
   color: #f1f1f1;
- 
- 
+  box-shadow: #040404;
  }
  .api-key-form input {
   font-family: monospace;
@@ -272,8 +248,6 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
  }
- 
- 
  
  
  .homepage .panel:hover {
