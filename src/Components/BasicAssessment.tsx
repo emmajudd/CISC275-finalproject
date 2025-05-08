@@ -106,7 +106,7 @@ function BasicAssessment() {
 
 
         {/* Submit button - validates that all questions are answered before showing popup */}
-        <Button
+        <button
           type="submit"
           className="pinky-button"
           onClick={(e) => {
@@ -125,7 +125,7 @@ function BasicAssessment() {
           }}
         >
           Submit Answers
-        </Button>
+        </button>
 
 
       </Form>
