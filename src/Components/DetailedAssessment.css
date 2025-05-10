@@ -121,5 +121,9 @@
 .popup-content .mt-3 {
   margin-left: 10px;
 }
-  
+.button-container .pinky-button {
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
 
