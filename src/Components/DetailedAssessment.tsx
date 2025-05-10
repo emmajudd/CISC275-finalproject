@@ -59,25 +59,29 @@ function DetailedAssessment() {
          </div>
        ))}
         {/* Submit button triggers validation and potentially shows the popup */}
-        <Button
+        <div className="button-container">
+        <button
+        
           type="submit"
-          className="submit-button"
+          className="pinky-button"
           onClick={(e) => {
-            e.preventDefault(); // Prevent default form submission
+            e.preventDefault();
             if (Object.keys(answers).length === questions.length) {
               setPopup(true);
+              // 🎉 Trigger confetti here
               confetti({
-                              particleCount: 350,
-                              spread: 70,
-                              origin: { y: 0.6 },
-                            }); // Show thank-you popup if all questions are answered
+                particleCount: 350,
+                spread: 70,
+                origin: { y: 0.6 },
+              });
             } else {
-              alert("Please answer all questions with more than ten characters."); // Alert if not all answered
+              alert("Please answer all questions");
             }
           }}
         >
           Submit Answers
-        </Button>
+        </button>
+        </div>
       </Form>
 
       {/* Popup shown after submission is complete */}
@@ -88,12 +92,13 @@ function DetailedAssessment() {
             <p>We'll use your answers to provide better career insights.</p>
 
             {/* Button to navigate to the results page, passing data via router state */}
+            <div className="button-container">
             <Button
               onClick={() => {
                 setPopup(false);
                 navigate("/");
               }}
-              className="mt-3"
+              className="pinky-button"
             >
               Close and Go Home
             </Button>
@@ -103,13 +108,17 @@ function DetailedAssessment() {
                 setPopup(false); // Hide popup
                 navigate("/detailed-results", { state: { questions, answers } }); // Navigate to results page
               }}
-              className="mt-3 ms-2"
+              className="pinky-button"
             >
               Go to Results
             </Button>
           </div>
+          </div>
         </div>
       )}
+       <div className="button-container">
+        <Button className="pinky-button" onClick={() => navigate("/")}>Go Back to Home</Button>
+      </div>
     </div>
   );
 }
