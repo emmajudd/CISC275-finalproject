@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useNavigate} from "react-router-dom"
 import "./Homepage.css"; // Import CSS for styling
 import { Button, Form } from "react-bootstrap";
@@ -7,39 +7,37 @@ import axios from "axios"; // Import axios for API requests
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 const saveKeyData = "MYKEY";
-const prevKey = localStorage.getItem(saveKeyData);
-let keyData = "";
-
-
-if (prevKey !== null) {
- keyData = JSON.parse(prevKey);
-}
-
-
 
 
 const HomePage = () => {
  const navigate = useNavigate();
- const [key, setKey] = useState<string>(keyData);
+ const [key, setKey] = useState<string>("");
  const [userInput, setUserInput] = useState<string>(""); // State for user input
  const [chatResponse, setChatResponse] = useState<string>(""); // State for ChatGPT response
  const [isLoading, setIsLoading] = useState<boolean>(false); // For loading
+ const [keyLoaded, setKeyLoaded] = useState(false); // Prevents rendering before key is loaded
 
+ // Load key from localStorage only in browser
+ useEffect(() => {
+   if (typeof window !== "undefined") {
+     const prevKey = localStorage.getItem(saveKeyData);
+     if (prevKey !== null) {
+       setKey(JSON.parse(prevKey));
+     }
+     setKeyLoaded(true);
+   }
+ }, []);
 
-
-
-   //sets the local storage item to the api key the user inputed
+ //sets the local storage item to the api key the user inputed
  function handleSubmit() {
    localStorage.setItem(saveKeyData, JSON.stringify(key));
    window.location.reload();
  }
 
-
-   //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
+ //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
  function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
    setKey(event.target.value);
  }
-
 
  // Function to handle ChatGPT API call
  async function handleChatSubmit() {
@@ -98,6 +96,7 @@ const HomePage = () => {
    }
  }
 
+ if (!keyLoaded) return null; // Don't render until key is loaded
 
  return (
    <div className="homepage">

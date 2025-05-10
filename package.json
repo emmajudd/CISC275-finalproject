@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@playwright/test": "^1.52.0",
     "@types/axios": "^0.9.36",
     "@types/canvas-confetti": "^1.9.0"
   }
