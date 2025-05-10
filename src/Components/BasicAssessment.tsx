@@ -106,7 +106,9 @@ function BasicAssessment() {
 
 
         {/* Submit button - validates that all questions are answered before showing popup */}
+        <div className="button-container">
         <button
+        
           type="submit"
           className="pinky-button"
           onClick={(e) => {
@@ -126,7 +128,7 @@ function BasicAssessment() {
         >
           Submit Answers
         </button>
-
+        </div>
 
       </Form>
 
@@ -138,36 +140,38 @@ function BasicAssessment() {
             <h2>Thank you for your responses!</h2>
             <p>We'll use your answers to provide better career insights.</p>
 
+            {/* Centered popup buttons */}
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: 15 }}>
+              {/* Button to close popup and return to home */}
+              <Button
+                onClick={() => {
+                  setPopup(false);
+                  navigate("/");
+                }}
+                className="pinky-button"
+              >
+                Close and Go Home
+              </Button>
 
-            {/* Button to close popup and return to home */}
-            <Button
-              onClick={() => {
-                setPopup(false);
-                navigate("/");
-              }}
-              className="pinky-button"
-            >
-              Close and Go Home
-            </Button>
-
-
-            {/* Button to view the results page, passing answers and questions as state */}
-            <Button
-              onClick={() => {
-                setPopup(false);
-                navigate("/basic-results", { state: { questions, answers } });
-              }}
-              className="pinky-button"
-            >
-              Go to Results
-            </Button>
+              {/* Button to view the results page, passing answers and questions as state */}
+              <Button
+                onClick={() => {
+                  setPopup(false);
+                  navigate("/basic-results", { state: { questions, answers } });
+                }}
+                className="pinky-button"
+              >
+                Go to Results
+              </Button>
+            </div>
           </div>
         </div>
       )}
 
-
       {/* Additional navigation button to return to homepage */}
-      <Button className="pinky-button" onClick={() => navigate("/")}>Go Back to Home</Button>
+      <div className="button-container">
+        <Button className="pinky-button" onClick={() => navigate("/")}>Go Back to Home</Button>
+      </div>
     </div>
   );
 }

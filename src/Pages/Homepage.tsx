@@ -100,7 +100,7 @@ const HomePage = () => {
 
  return (
    <div className="homepage">
-     <h1>The Career Helpi</h1>
+     <h1>The Pink Path</h1>
     
      {/* Two-Panel Structure */}
      <div className="panel-container">

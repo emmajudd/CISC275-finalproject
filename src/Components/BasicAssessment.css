@@ -105,26 +105,12 @@ body.dark-mode .basic-assessment h1 {
   margin-left: 10px;
 }
 
-.pinky-button {
-  align-items: center;
-  color: #111;
-  font-family: monospace;
-  background-color: #fddeda;
-  border: 2px solid #010101;
-  max-width: 100%;
-  padding: 0 25px;
-  position: center;
-  text-align: center;
-  border-radius: 8px;
-  box-sizing: border-box;
-  font-size: 17px;
-  height: 48px;
+.button-container {
+  display: flex;
   justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
-.pinky-button:hover {
-  background-color: #fbb1c8;
-  color: #111;
-  transform: scale(1.05);
-  border: 2px solid #010101;
-}
+
+
