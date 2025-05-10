@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"; 
 import { useLocation, useNavigate } from "react-router-dom"; // For accessing route state and navigation
 import axios from "axios"; // HTTP client for API requests
-import loading from '../Assets/loading.gif'; // Loading GIF for user feedback
 import { useRef } from 'react';
 
 
@@ -20,6 +19,16 @@ function BasicResults() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const pdfRef = useRef(null);
+  
+  // Only require the image if running in the browser
+  let loading;
+  if (typeof window !== "undefined") {
+    try {
+      loading = require('../Assets/loading.gif');
+    } catch {
+      loading = undefined;
+    }
+  }
   
   // useEffect runs once on component mount
   useEffect(() => {
@@ -125,23 +134,21 @@ function BasicResults() {
     return <p>Redirecting...</p>;
   }
 
-  // Show a loading message whxile waiting for API response
+  // Show a loading message while waiting for API response
   if (isLoading) {
     return (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-        }}
-      >
-        <img
-          src={loading}
-          alt="Loading..."
-          className="loading-gif"
-          style={{ width: "100px", height: "100px" }} // Adjust size here
-        />
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '60vh',
+        width: '100%',
+      }}>
+        {loading ? (
+          <img src={loading} alt="Loading..." style={{ width: '100px', height: '100px' }} />
+        ) : (
+          <div style={{ fontSize: '1.5rem', color: '#888' }}>Loading...</div>
+        )}
       </div>
     );
   }
