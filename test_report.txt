@@ -35,21 +35,19 @@ All files                |       0 |        0 |       0 |       0 |
   index.tsx              |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts     |       0 |        0 |       0 |       0 | 3-10              
  src/Components          |       0 |        0 |       0 |       0 |                   
-  BasicAssessment.tsx    |       0 |        0 |       0 |       0 | 10-170            
+  BasicAssessment.tsx    |       0 |        0 |       0 |       0 | 10-173            
   BasicQuestions.tsx     |       0 |        0 |       0 |       0 | 6-58              
   BasicResults.tsx       |       0 |        0 |       0 |       0 | 9-180             
   ContactPage.tsx        |       0 |      100 |       0 |       0 | 6                 
-  DetailedAssessment.tsx |       0 |        0 |       0 |       0 | 9-104             
+  DetailedAssessment.tsx |       0 |        0 |       0 |       0 | 9-120             
   DetailedResults.tsx    |       0 |        0 |       0 |       0 | 7-114             
   Navbar.tsx             |       0 |        0 |       0 |       0 | 12-31             
   ProgressBar.tsx        |       0 |      100 |       0 |       0 | 8-11              
  src/Pages               |       0 |        0 |       0 |       0 |                   
   Homepage.tsx           |       0 |        0 |       0 |       0 | 9-157             
- src/tests               |       0 |      100 |       0 |       0 |                   
-  gptintegrationtests.ts |       0 |      100 |       0 |       0 | 4-8               
 -------------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       0 total
 Snapshots:   0 total
-Time:        2.824 s
+Time:        2.65 s
 Ran all test suites.
