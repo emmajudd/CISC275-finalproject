@@ -21,6 +21,9 @@
  
 body.contact-page-active{
   background-image: url('/public/floral.jpg') !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
  .contact-list {
@@ -57,7 +60,7 @@ body.contact-page-active{
   font-size: 0.98em;
   word-break: break-all;
  }
- 
+
  body.dark-mode .contact-email {
   color: #fef9f9;
   font-size: 0.98em;
