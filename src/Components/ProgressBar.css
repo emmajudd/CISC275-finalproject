@@ -1,4 +1,3 @@
-
 .progress-container {
     position: sticky;
     top: 75px; /* Equal to the navbar height */
@@ -8,7 +7,6 @@
     border-radius: 5px;
     z-index: 999; /* Below navbar (z-index: 1000) */
 }
-  
   
 .progress-bar {
   height: 100%;

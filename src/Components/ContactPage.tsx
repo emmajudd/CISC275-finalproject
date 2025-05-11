@@ -1,8 +1,12 @@
-
+import { useEffect } from "react";
 import "./ContactPage.css";
 
 function ContactPage() {
-  
+  useEffect(() => {
+    document.body.classList.add('contact-page-active');
+    return () => document.body.classList.remove('contact-page-active');
+  }, []);
+
   return (
     <div className="contact-container">
       <h1>Contact the Group</h1>

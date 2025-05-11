@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-
 /* Body and main content adjustments */
 body {
   font-family: Arial, sans-serif;
@@ -13,7 +12,6 @@ body {
   color: #333;
   padding-top: 60px; /* Adjust this value to match the navbar height */
 }
-
 
 /* General Navbar Styling */
 .navbar {
@@ -34,11 +32,6 @@ font-family: 'Arial', sans-serif;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-
-
-
-
-
 .navbar .nav-links {
 display: flex;
 font-family: monospace;
@@ -47,11 +40,9 @@ margin: 0;
 padding: 0;
 }
 
-
 .navbar .nav-links li {
 margin: 0 15px;
 }
-
 
 .navbar .nav-links a {
 text-decoration: none;
@@ -60,11 +51,9 @@ font-size: .9rem;
 transition: color 0.3s ease;
 }
 
-
 .navbar .nav-links a:hover {
 color: #f680a5; /* Highlight color on hover */
 }
-
 
 /* Add a button-like style for active links */
 .navbar .nav-links a.active {
@@ -75,7 +64,6 @@ border-radius: 4px;
 transition: background-color 0.3s ease;
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
 .navbar {
@@ -83,12 +71,10 @@ transition: background-color 0.3s ease;
   align-items: flex-start;
 }
 
-
 .navbar .nav-links {
   flex-direction: column;
   width: 100%;
 }
-
 
 .navbar .nav-links li {
   margin: 10px 0;
