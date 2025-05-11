@@ -15,9 +15,6 @@ if (prevKey !== null) {
  keyData = JSON.parse(prevKey);
 }
 
-
-
-
 const HomePage = () => {
  const navigate = useNavigate();
  const [key, setKey] = useState<string>(keyData);
@@ -25,21 +22,16 @@ const HomePage = () => {
  const [chatResponse, setChatResponse] = useState<string>(""); // State for ChatGPT response
  const [isLoading, setIsLoading] = useState<boolean>(false); // For loading
 
-
-
-
    //sets the local storage item to the api key the user inputed
  function handleSubmit() {
    localStorage.setItem(saveKeyData, JSON.stringify(key));
    window.location.reload();
  }
 
-
    //whenever there's a change it'll store the api key in a local state called key but it won't be set in the local storage until the user clicks the submit button
  function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
    setKey(event.target.value);
  }
-
 
  // Function to handle ChatGPT API call
  async function handleChatSubmit() {
@@ -58,9 +50,7 @@ const HomePage = () => {
      return;
    }
 
-
    setIsLoading(true); // Disable submit button to avoid double submissions
-
 
    try {
      const response = await axios.post(
@@ -97,7 +87,6 @@ const HomePage = () => {
        setIsLoading(false);
    }
  }
-
 
  return (
    <div className="homepage">
@@ -146,7 +135,6 @@ const HomePage = () => {
        </Form>
      </div>
 
-
      <div className="chatgpt-container">
        <h2>Chat with Career Helper
        </h2>
@@ -162,7 +150,6 @@ const HomePage = () => {
          <Button className="pinky-button" onClick={handleChatSubmit} disabled={isLoading}>
             {isLoading ? "Sending..." : "Send"} 
          </Button>
-
 
        </Form>
        {chatResponse && (

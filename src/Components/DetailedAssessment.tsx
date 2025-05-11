@@ -68,7 +68,7 @@ function DetailedAssessment() {
             e.preventDefault();
             if (Object.keys(answers).length === questions.length) {
               setPopup(true);
-              // 🎉 Trigger confetti here
+              // Trigger confetti here
               confetti({
                 particleCount: 350,
                 spread: 70,

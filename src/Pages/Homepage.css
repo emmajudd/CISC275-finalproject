@@ -7,7 +7,13 @@ body {
   padding: 0;
  }
  
- 
+ body.homepage-active{
+  background-image: url('/public/floral.jpg') !important; /* Add your flower background image here */
+  background-size: cover; /* Ensure the background covers the full screen */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat;
+ }
+
  body.dark-mode {
   background-color: #181818;
   color: #f1f1f1;
@@ -110,10 +116,12 @@ body {
    box-shadow: #fddeda;
   margin-bottom: 10px;
  }
+
  .dark-mode .api-key-form h3 {
   color: #f1f1f1;
   box-shadow: #040404;
  }
+
  .api-key-form input {
   font-family: monospace;
   width: 100%;
@@ -127,12 +135,10 @@ body {
   outline: none; /* Remove default outline */
  }
  
- 
  .api-key-form input:focus {
   border-color: #fddeda; /* Dark blue border on focus */
   box-shadow: 0 0 5px rgba(44, 62, 80, 0.5); /* Subtle shadow on focus */
  }
- 
  
  .api-key-form .submit-button {
   font-family: monospace;
@@ -148,9 +154,8 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
  }
  
- 
  .api-key-form .submit-button:hover {
-  background-color: #00bcd4; /* Bright blue hover */
+  background-color: #f0f4ff; /* Bright blue hover */
   transform: scale(1.05); /* Slight zoom effect */
  }
  
@@ -218,7 +223,7 @@ body {
  
  
  .chatgpt-container .submit-button:hover {
-  background-color: #00bcd4; /* Bright blue hover */
+  background-color: #f0f4ff; 
   transform: scale(1.05); /* Slight zoom effect */
  }
  
@@ -287,18 +292,14 @@ body {
   text-decoration: none;
  }
  
- 
  .homepage .panel .button:hover {
-  background-color: #00bcd4; /* Bright blue hover */
+  background-color: #f0f4ff; /* Bright blue hover */
   transform: scale(1.05); /* Slight zoom effect */
  }
- 
  
  .homepage .panel .button:active {
   transform: scale(0.95); /* Slight shrink effect on click */
  }
- 
-
  
  .pinky-button {
   align-items: center;
@@ -318,14 +319,12 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
  }
  
- 
  .pinky-button:hover {
   background-color: #fbb1c8;
   color: #111;
   transform: scale(1.05);
   border: 2px solid #010101;
  }
- 
  
  .button-container {
   display: flex;

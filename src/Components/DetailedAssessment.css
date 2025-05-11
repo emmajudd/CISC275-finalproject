@@ -1,4 +1,3 @@
-
 .detailed-assessment {
   max-width: 800px;
   margin: 20px auto;
@@ -14,6 +13,7 @@
   text-align: center;
   margin-bottom: 20px;
   }
+
   body.dark-mode .detailed-assessment h1 {
     color: #fff;
   }
@@ -57,7 +57,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
   
-
   .submit-button {
     font-family: monospace;
     display: inline-block;
@@ -73,7 +72,6 @@
     margin-top: 20px;
   }
    
-  
   .submit-button:hover {
     background-color: #fbb1c8; 
     transform: scale(1.05); /* Slight zoom effect */
@@ -82,6 +80,7 @@
   .submit-button:active {
     transform: scale(0.95); /* Slight shrink effect on click */
   }
+
   .popup-overlay {
     position: fixed;
     top: 0;
@@ -115,12 +114,15 @@
     font-size: 1.5rem;
     cursor: pointer;
   }
+
   .popup-content .ms-2 {
     margin-top: 15px;
   }
+
 .popup-content .mt-3 {
   margin-left: 10px;
 }
+
 .button-container .pinky-button {
   margin: 0 10px;
   font-size: 1rem;
