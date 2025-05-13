@@ -61,13 +61,21 @@ function DetailedResults() {
         );
 
         const chatGPTOutput =
-          (
-            response.data as {
-              choices: { message: { content: string } }[];
-            }
-          ).choices[0]?.message?.content.trim() || "No response received.";
-
-        setChatResponse(chatGPTOutput);
+        (
+          response.data as {
+            choices: { message: { content: string } }[];
+          }
+        ).choices[0]?.message?.content.trim() || "No response received.";
+  
+         console.log("ChatGPT Output:", chatGPTOutput); // Debug log response output
+  
+        // CLEAN THE OUTPUT
+        const cleanedOutput = chatGPTOutput
+          .replace(/^```(?:html)?/i, "")
+          .replace(/```$/, "")
+          .trim();
+  
+        setChatResponse(cleanedOutput); // Save cleaned response to state
       } catch (error: any) {
         console.error("Error fetching results:", error.response || error.message);
         alert("Failed to fetch results from ChatGPT.");
