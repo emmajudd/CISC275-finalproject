@@ -18,7 +18,7 @@ function AppWrapper() {
     </Router>
   );
 }
-
+//
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation(); // ✅ Use this instead of global `location`
