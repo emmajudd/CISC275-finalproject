@@ -2,39 +2,493 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
-FAIL src/App.test.tsx
-  ● Test suite failed to run
+PASS src/Components/BasicQuestions.test.tsx
+  ● Console
 
-    Your test suite must contain at least one test.
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
 
-      at onResult (node_modules/@jest/core/build/TestScheduler.js:175:18)
-      at node_modules/@jest/core/build/TestScheduler.js:316:17
-      at node_modules/emittery/index.js:260:13
-          at Array.map (<anonymous>)
-      at Emittery.emit (node_modules/emittery/index.js:258:23)
+    [0m [90m 10 |[39m
+     [90m 11 |[39m test([32m'renders all basic questions and submit button'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 12 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 13 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 14 |[39m       [33m<[39m[33mBasicQuestions[39m [33m/[39m[33m>[39m
+     [90m 15 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/BasicQuestions.test.tsx:12:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+    [0m [90m 10 |[39m
+     [90m 11 |[39m test([32m'renders all basic questions and submit button'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 12 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 13 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 14 |[39m       [33m<[39m[33mBasicQuestions[39m [33m/[39m[33m>[39m
+     [90m 15 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:26:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/BasicQuestions.test.tsx:12:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+    [0m [90m 10 |[39m
+     [90m 11 |[39m test([32m'renders all basic questions and submit button'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 12 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 13 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 14 |[39m       [33m<[39m[33mBasicQuestions[39m [33m/[39m[33m>[39m
+     [90m 15 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:37:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/BasicQuestions.test.tsx:12:9)
+
+PASS src/Components/DetailedAssessment.test.tsx
+  ● Console
+
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m test([32m'renders detailed assessment heading and first question'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 14 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 15 |[39m       [33m<[39m[33mDetailedAssessment[39m [33m/[39m[33m>[39m
+     [90m 16 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/DetailedAssessment.test.tsx:13:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m test([32m'renders detailed assessment heading and first question'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 14 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 15 |[39m       [33m<[39m[33mDetailedAssessment[39m [33m/[39m[33m>[39m
+     [90m 16 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:26:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/DetailedAssessment.test.tsx:13:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+    [0m [90m 11 |[39m
+     [90m 12 |[39m test([32m'renders detailed assessment heading and first question'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 13 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 14 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 15 |[39m       [33m<[39m[33mDetailedAssessment[39m [33m/[39m[33m>[39m
+     [90m 16 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:37:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/DetailedAssessment.test.tsx:13:9)
+
+PASS src/Components/BasicAssessment.test.tsx
+  ● Console
+
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m test([32m'renders basic assessment heading'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 10 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 11 |[39m       [33m<[39m[33mBasicAssessment[39m [33m/[39m[33m>[39m
+     [90m 12 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/BasicAssessment.test.tsx:9:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m test([32m'renders basic assessment heading'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 10 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 11 |[39m       [33m<[39m[33mBasicAssessment[39m [33m/[39m[33m>[39m
+     [90m 12 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:26:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/BasicAssessment.test.tsx:9:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+    [0m [90m  7 |[39m
+     [90m  8 |[39m test([32m'renders basic assessment heading'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 10 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 11 |[39m       [33m<[39m[33mBasicAssessment[39m [33m/[39m[33m>[39m
+     [90m 12 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:37:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/BasicAssessment.test.tsx:9:9)
+
+PASS src/Components/ProgressBar.test.tsx
+  ● Console
+
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m  5 |[39m
+     [90m  6 |[39m test([32m'renders progress bar with correct percentage'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  7 |[39m   render([33m<[39m[33mProgressBar[39m progress[33m=[39m{[35m42[39m} [33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m  8 |[39m   [36mconst[39m percentText [33m=[39m screen[33m.[39mgetByText([32m'42%'[39m)[33m;[39m
+     [90m  9 |[39m   expect(percentText)[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 10 |[39m   [90m// Find the progress bar by its class[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/ProgressBar.test.tsx:7:9)
+
+PASS src/Components/Navbar.test.tsx
+  ● Console
+
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m  6 |[39m
+     [90m  7 |[39m test([32m'renders all navigation links and dark mode button'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  8 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m  9 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 10 |[39m       [33m<[39m[33mNavbar[39m darkMode[33m=[39m{[36mfalse[39m} setDarkMode[33m=[39m{() [33m=>[39m {}} [33m/[39m[33m>[39m
+     [90m 11 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/Navbar.test.tsx:8:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+    [0m [90m  6 |[39m
+     [90m  7 |[39m test([32m'renders all navigation links and dark mode button'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  8 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m  9 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 10 |[39m       [33m<[39m[33mNavbar[39m darkMode[33m=[39m{[36mfalse[39m} setDarkMode[33m=[39m{() [33m=>[39m {}} [33m/[39m[33m>[39m
+     [90m 11 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:26:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/Navbar.test.tsx:8:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+    [0m [90m  6 |[39m
+     [90m  7 |[39m test([32m'renders all navigation links and dark mode button'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  8 |[39m   render(
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m  9 |[39m     [33m<[39m[33mMemoryRouter[39m[33m>[39m
+     [90m 10 |[39m       [33m<[39m[33mNavbar[39m darkMode[33m=[39m{[36mfalse[39m} setDarkMode[33m=[39m{() [33m=>[39m {}} [33m/[39m[33m>[39m
+     [90m 11 |[39m     [33m<[39m[33m/[39m[33mMemoryRouter[39m[33m>[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at logV6DeprecationWarnings (node_modules/react-router/lib/deprecations.ts:37:5)
+      at node_modules/react-router/lib/components.tsx:257:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/Navbar.test.tsx:8:9)
+
+PASS src/Components/ContactPage.test.tsx
+  ● Console
+
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m  5 |[39m
+     [90m  6 |[39m test([32m'renders contact page heading and all group members'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  7 |[39m   render([33m<[39m[33mContactPage[39m [33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m  8 |[39m   expect(screen[33m.[39mgetByRole([32m'heading'[39m[33m,[39m { name[33m:[39m [35m/contact the group/i[39m }))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m  9 |[39m   expect(screen[33m.[39mgetByText([35m/mia pfaff/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 10 |[39m   expect(screen[33m.[39mgetByText([35m/sean smith/i[39m))[33m.[39mtoBeInTheDocument()[33m;[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/Components/ContactPage.test.tsx:7:9)
+
+PASS src/App.test.tsx
+  ● Console
+
+    console.error
+      Warning: `ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`. See https://react.dev/warnings/react-dom-test-utils for more info.
+
+    [0m [90m  8 |[39m
+     [90m  9 |[39m test([32m'renders homepage title'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 10 |[39m   render([33m<[39m[33mApp[39m [33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 11 |[39m   [36mconst[39m title [33m=[39m screen[33m.[39mgetByText([35m/the pink path/i[39m)[33m;[39m
+     [90m 12 |[39m   expect(title)[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 13 |[39m })[33m;[39m[0m
+
+      at printWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:71:30)
+      at error (node_modules/react-dom/cjs/react-dom-test-utils.development.js:45:7)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1736:7)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/App.test.tsx:10:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+
+    [0m [90m  8 |[39m
+     [90m  9 |[39m test([32m'renders homepage title'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 10 |[39m   render([33m<[39m[33mApp[39m [33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 11 |[39m   [36mconst[39m title [33m=[39m screen[33m.[39mgetByText([35m/the pink path/i[39m)[33m;[39m
+     [90m 12 |[39m   expect(title)[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 13 |[39m })[33m;[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at Object.logV6DeprecationWarnings [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:26:5)
+      at node_modules/react-router-dom/index.tsx:869:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/App.test.tsx:10:9)
+
+    console.warn
+      ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+
+    [0m [90m  8 |[39m
+     [90m  9 |[39m test([32m'renders homepage title'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 10 |[39m   render([33m<[39m[33mApp[39m [33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 11 |[39m   [36mconst[39m title [33m=[39m screen[33m.[39mgetByText([35m/the pink path/i[39m)[33m;[39m
+     [90m 12 |[39m   expect(title)[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 13 |[39m })[33m;[39m[0m
+
+      at warnOnce (node_modules/react-router/lib/deprecations.ts:9:13)
+      at logDeprecation (node_modules/react-router/lib/deprecations.ts:14:3)
+      at Object.logV6DeprecationWarnings [as UNSAFE_logV6DeprecationWarnings] (node_modules/react-router/lib/deprecations.ts:37:5)
+      at node_modules/react-router-dom/index.tsx:869:25
+      at commitHookEffectListMount (node_modules/react-dom/cjs/react-dom.development.js:23189:26)
+      at commitPassiveMountOnFiber (node_modules/react-dom/cjs/react-dom.development.js:24970:11)
+      at commitPassiveMountEffects_complete (node_modules/react-dom/cjs/react-dom.development.js:24930:9)
+      at commitPassiveMountEffects_begin (node_modules/react-dom/cjs/react-dom.development.js:24917:7)
+      at commitPassiveMountEffects (node_modules/react-dom/cjs/react-dom.development.js:24905:3)
+      at flushPassiveEffectsImpl (node_modules/react-dom/cjs/react-dom.development.js:27078:3)
+      at flushPassiveEffects (node_modules/react-dom/cjs/react-dom.development.js:27023:14)
+      at node_modules/react-dom/cjs/react-dom.development.js:26808:9
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at actWithWarning (node_modules/react-dom/cjs/react-dom-test-utils.development.js:1740:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/App.test.tsx:10:9)
 
 -------------------------|---------|----------|---------|---------|-------------------
 File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 -------------------------|---------|----------|---------|---------|-------------------
-All files                |       0 |        0 |       0 |       0 |                   
- src                     |       0 |        0 |       0 |       0 |                   
-  App.tsx                |       0 |        0 |       0 |       0 | 15-40             
+All files                |   36.23 |    22.91 |   47.36 |   34.82 |                   
+ src                     |   43.47 |       30 |      60 |   43.47 |                   
+  App.tsx                |   83.33 |       50 |     100 |   83.33 | 31,34             
   index.tsx              |       0 |      100 |     100 |       0 | 7-19              
   reportWebVitals.ts     |       0 |        0 |       0 |       0 | 3-10              
- src/Components          |       0 |        0 |       0 |       0 |                   
-  BasicAssessment.tsx    |       0 |        0 |       0 |       0 | 10-173            
-  BasicQuestions.tsx     |       0 |        0 |       0 |       0 | 6-58              
+ src/Components          |   36.73 |    23.52 |   51.11 |   34.75 |                   
+  BasicAssessment.tsx    |   47.82 |       25 |   45.45 |   45.45 | 85-173            
+  BasicQuestions.tsx     |     100 |      100 |     100 |     100 |                   
   BasicResults.tsx       |       0 |        0 |       0 |       0 | 9-188             
-  ContactPage.tsx        |       0 |      100 |       0 |       0 | 5-10              
-  DetailedAssessment.tsx |       0 |        0 |       0 |       0 | 9-120             
+  ContactPage.tsx        |     100 |      100 |     100 |     100 |                   
+  DetailedAssessment.tsx |   78.26 |      100 |      70 |   76.19 | 98-120            
   DetailedResults.tsx    |       0 |        0 |       0 |       0 | 7-122             
-  Navbar.tsx             |       0 |        0 |       0 |       0 | 12-31             
-  ProgressBar.tsx        |       0 |      100 |       0 |       0 | 8-11              
- src/Pages               |       0 |        0 |       0 |       0 |                   
-  Homepage.tsx           |       0 |        0 |       0 |       0 | 9-146             
+  Navbar.tsx             |      50 |       50 |   33.33 |   66.66 | 31                
+  ProgressBar.tsx        |     100 |      100 |     100 |     100 |                   
+ src/Pages               |   29.72 |    16.66 |   14.28 |   29.72 |                   
+  Homepage.tsx           |   29.72 |    16.66 |   14.28 |   29.72 | 15,27-87,102-146  
 -------------------------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 1 total
-Tests:       0 total
+
+Test Suites: 7 passed, 7 total
+Tests:       15 passed, 15 total
 Snapshots:   0 total
-Time:        2.544 s
+Time:        5.282 s
 Ran all test suites.
