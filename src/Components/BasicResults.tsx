@@ -65,12 +65,12 @@ function BasicResults() {
         const response = await axios.post(
           "https://api.openai.com/v1/chat/completions",
           {
-            model: "gpt-3.5-turbo", // Specify the model to use
+            model: "gpt-4o", // Specify the model to use
             messages: [
               {
                 role: "system",
                 content: `You are a career advisor. Provide career suggestions based on the user's answers to the following questions. 
-                Format the response in HTML and include inline styles or CSS class names for styling. 
+                Format the response in HTML and include inline styles or CSS class names for styling. Do not mention the guidelines or html use.
                 Use the following CSS guidelines:
                 - Use a clean and professional layout.
                 - Highlight job titles in bold and larger font sizes.
@@ -108,14 +108,22 @@ function BasicResults() {
 
         // Extract the response text from the returned data structure
         const chatGPTOutput =
-          (
-            response.data as {
-              choices: { message: { content: string } }[];
-            }
-          ).choices[0]?.message?.content.trim() || "No response received.";
+      (
+        response.data as {
+          choices: { message: { content: string } }[];
+        }
+      ).choices[0]?.message?.content.trim() || "No response received.";
 
-        console.log("ChatGPT Output:", chatGPTOutput); // Debug log response output
-        setChatResponse(chatGPTOutput); // Save response to state
+       console.log("ChatGPT Output:", chatGPTOutput); // Debug log response output
+
+      // CLEAN THE OUTPUT
+      const cleanedOutput = chatGPTOutput
+        .replace(/^```(?:html)?/i, "")
+        .replace(/```$/, "")
+        .trim();
+
+      setChatResponse(cleanedOutput); // Save cleaned response to state
+
         
       } catch (error: any) {
         // Log and notify the user of any error

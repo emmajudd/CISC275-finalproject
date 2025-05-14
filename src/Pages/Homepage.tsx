@@ -56,9 +56,9 @@ const HomePage = () => {
      const response = await axios.post(
        "https://api.openai.com/v1/chat/completions",
        {
-         model: "gpt-3.5-turbo", // Use the chat-based model
+         model: "gpt-4o", // Use the chat-based model
          messages: [
-           { role: "system", content: "You are a helpful career assistant." },
+           { role: "system", content: "You are a helpful career assistant, help users with any questions about careers and their potential career. Go in-depth with your answer." },
            { role: "user", content: userInput },
          ],
          max_tokens: 150,
