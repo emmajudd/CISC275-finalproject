@@ -6,12 +6,15 @@ interface ProgressBarProps {
 }
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
-  const roundedProgress = Math.round(progress); // Round to the nearest integer
+  // Clamp progress between 0 and 100
+  const safeProgress = Math.max(0, Math.min(100, progress));
+  const roundedProgress = Math.round(safeProgress); // Round to the nearest integer
 
   return (
     <div className="progress-container">
       <div
         className="progress-bar"
+        data-testid="progress-bar"
         style={{ width: `${roundedProgress}%` }} // Dynamically set the width
       >
         <span className="progress-text">{`${roundedProgress}%`}</span> {/* Display rounded progress */}

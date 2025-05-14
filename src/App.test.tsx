@@ -1,29 +1,15 @@
-/*
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import { MemoryRouter } from 'react-router-dom';
-import '@testing-library/jest-dom/extend-expect'; 
+import '@testing-library/jest-dom';
+import axios from 'axios';
 
-test('renders learn react link', () => {
-  render(
-    <MemoryRouter>
-      <App />
-    </MemoryRouter>
-  );
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+jest.mock('axios');
 
-
-import { render, screen } from '@testing-library/react';
-import App from './App';
-jest.mock("axios");
-
-test('renders learn react link', () => {
+test('renders homepage title', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const title = screen.getByText(/the pink path/i);
+  expect(title).toBeInTheDocument();
 });
-*/
-export {};
+
+
