@@ -12,6 +12,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
     <div className="progress-container">
       <div
         className="progress-bar"
+        data-testid="progress-bar"
         style={{ width: `${roundedProgress}%` }} // Dynamically set the width
       >
         <span className="progress-text">{`${roundedProgress}%`}</span> {/* Display rounded progress */}
