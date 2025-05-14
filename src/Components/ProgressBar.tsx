@@ -6,7 +6,9 @@ interface ProgressBarProps {
 }
 
 const ProgressBar: React.FC<ProgressBarProps> = ({ progress }) => {
-  const roundedProgress = Math.round(progress); // Round to the nearest integer
+  // Clamp progress between 0 and 100
+  const safeProgress = Math.max(0, Math.min(100, progress));
+  const roundedProgress = Math.round(safeProgress); // Round to the nearest integer
 
   return (
     <div className="progress-container">
