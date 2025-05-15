@@ -3,12 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { Button, Form } from "react-bootstrap";
 
 function BasicQuestions() {
-  const navigate = useNavigate(); // Initialize navigation hook
+  const navigate = useNavigate(); 
 
-  // State to hold user's answers to the questions
   const [answers, setAnswers] = useState<string[]>([]);
 
-  // Array of career assessment questions
   const questions = [
     "What are your interests?",
     "What are your skills?",

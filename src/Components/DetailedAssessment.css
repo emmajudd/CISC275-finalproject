@@ -2,14 +2,14 @@
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #ffffff; /* White background for the form */
+  background-color: #ffffff; 
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
   .detailed-assessment h1 {
     font-size: 2rem;
-  color: #2c3e50; /* Dark blue text */
+  color: #2c3e50; 
   text-align: center;
   margin-bottom: 20px;
   }
@@ -74,11 +74,11 @@
    
   .submit-button:hover {
     background-color: #fbb1c8; 
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05); 
   }
   
   .submit-button:active {
-    transform: scale(0.95); /* Slight shrink effect on click */
+    transform: scale(0.95); 
   }
 
   .popup-overlay {

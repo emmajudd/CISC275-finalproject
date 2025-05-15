@@ -1,3 +1,5 @@
+// This test file was generated with the help of an LLM. This test file verifies that the ProgressBar component 
+// correctly displays and styles the progress percentage, rounding values, capping negatives at 0%, and rendering up to 100% accurately
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ProgressBar from './ProgressBar';

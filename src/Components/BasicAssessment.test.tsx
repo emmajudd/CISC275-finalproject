@@ -1,3 +1,6 @@
+// This file includes code generated with the assistance of an AI tool.
+// It contains tests for the BasicAssessment component to verify rendering and progress bar updates.
+
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
@@ -30,14 +33,14 @@ test('progress bar updates as user answers questions', () => {
       <BasicAssessment />
     </MemoryRouter>
   );
-  // Answer the first question
+  //Answer first question
   const yesRadios = screen.getAllByRole('radio', { name: /yes/i });
   fireEvent.click(yesRadios[0]);
-  // Progress should update
+  //Progress should update
   const expectedProgress = Math.round((1 / 14) * 100) + '%';
   expect(screen.getByText(expectedProgress)).toBeInTheDocument();
   expect(screen.getByTestId('progress-bar')).toHaveStyle(`width: ${expectedProgress}`);
-  // Answer a second question
+  //Answer second question
   fireEvent.click(yesRadios[1]);
   const expectedProgress2 = Math.round((2 / 14) * 100) + '%';
   expect(screen.getByText(expectedProgress2)).toBeInTheDocument();

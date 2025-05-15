@@ -1,3 +1,5 @@
+// This file used LLM generated code This test file ensures the DetailedAssessment component behaves correctly by verifying
+// it renders the heading and first question, updates character counts dynamically, and only enables form submission when all 10 questions meet the minimum character requirement
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import DetailedAssessment from './DetailedAssessment';

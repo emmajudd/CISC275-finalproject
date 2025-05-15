@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import "./BasicAssessment.css"; // Import CSS for styling the component
-import { useNavigate } from "react-router-dom"; // Hook to navigate between routes
-import { Button, Form } from "react-bootstrap"; // Import Bootstrap components
-import ProgressBar from "./ProgressBar"; // Custom ProgressBar component
+import "./BasicAssessment.css"; 
+import { useNavigate } from "react-router-dom"; 
+import { Button, Form } from "react-bootstrap"; 
+import ProgressBar from "./ProgressBar";
 import confetti from 'canvas-confetti';
 
-
-// Array of career-oriented yes/no/maybe style questions
+// this is a list of questions for the user to anwswer via the radio buttons below
 const questions = [
   "Do you have a skill that others often struggle with but comes naturally to you?",
   "Do you prefer following instructions exactly rather than figuring things out on your own?",
@@ -26,43 +25,32 @@ const questions = [
 
 
 function BasicAssessment() {
-  const navigate = useNavigate(); // Hook for navigating to different routes
+  const navigate = useNavigate();  // for page transitions
 
-
-  // Store answers in a key-value pair where key = question index, value = selected answer
   const [answers, setAnswers] = useState<{ [key: number]: string }>({});
 
-
-  // Control the visibility of the popup that appears on successful submission
   const [showPopup, setPopup] = useState(false);
 
-
-  // Updates the answer for a given question
   const handleAnswer = (index: number, answer: string) => {
     setAnswers((prev) => ({ ...prev, [index]: answer }));
   };
 
-
-  // Calculate how much of the assessment has been completed (as a percentage)
   const progress = (Object.keys(answers).length / questions.length) * 100;
-
 
   return (
     <div className="basic-assessment">
       <h1>Basic Career Assessment</h1>
 
-
-      {/* Show progress bar based on number of questions answered */}
       <ProgressBar progress={progress} />
 
 
-      {/* Render the questions in a form with radio options */}
+      {/* radio options */}
       <Form>
         {questions.map((question, index) => (
           <div key={index} className="question-block">
             <p>{question}</p>
             <div className="answer-options">
-              {/* Radio button for "Yes" */}
+              {/* Yes */}
               <label>
                 <input
                   type="radio"
@@ -75,7 +63,7 @@ function BasicAssessment() {
               </label>
 
 
-              {/* Radio button for "No" */}
+              {/* No */}
               <label>
                 <input
                   type="radio"
@@ -88,7 +76,7 @@ function BasicAssessment() {
               </label>
 
 
-              {/* Radio button for "Neither" */}
+              {/* Neither */}
               <label>
                 <input
                   type="radio"
@@ -105,7 +93,7 @@ function BasicAssessment() {
          
 
 
-        {/* Submit button - validates that all questions are answered before showing popup */}
+        {/* Submit button*/}
         <div className="button-container">
         <button
         
@@ -115,7 +103,6 @@ function BasicAssessment() {
             e.preventDefault();
             if (Object.keys(answers).length === questions.length) {
               setPopup(true);
-              // 🎉 Trigger confetti here
               confetti({
                 particleCount: 350,
                 spread: 70,
@@ -133,16 +120,15 @@ function BasicAssessment() {
       </Form>
 
 
-      {/* Popup shown after submission with navigation options */}
+      {/* Popup shown after submission */}
       {showPopup && (
         <div className="popup-overlay">
           <div className="popup-content">
             <h2>Thank you for your responses!</h2>
             <p>We'll use your answers to provide better career insights.</p>
 
-            {/* Centered popup buttons */}
             <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: 15 }}>
-              {/* Button to close popup and return to home */}
+              {/* Close popup and return to home */}
               <Button
                 onClick={() => {
                   setPopup(false);
@@ -153,7 +139,7 @@ function BasicAssessment() {
                 Close and Go Home
               </Button>
 
-              {/* Button to view the results page, passing answers and questions as state */}
+              {/* Button to view the results page*/}
               <Button
                 onClick={() => {
                   setPopup(false);
@@ -168,7 +154,7 @@ function BasicAssessment() {
         </div>
       )}
 
-      {/* Additional navigation button to return to homepage */}
+      {/* Return to homepage but without submission*/}
       <div className="button-container">
         <Button className="pinky-button" onClick={() => navigate("/")}>Go Back to Home</Button>
       </div>
