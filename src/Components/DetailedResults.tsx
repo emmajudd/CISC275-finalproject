@@ -1,7 +1,10 @@
+// Portions of this component were generated with the assistance of an LLM
+// Functionality includes handling route state, input validation and redirection, API communication with ChatGPT, and response state management
+
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
-import loading from '../Assets/loading.gif'; // Loading GIF for user feedback
+import loading from '../Assets/loading.gif'; 
 
 function DetailedResults() {
   const location = useLocation();
@@ -67,15 +70,14 @@ function DetailedResults() {
           }
         ).choices[0]?.message?.content.trim() || "No response received.";
   
-         console.log("ChatGPT Output:", chatGPTOutput); // Debug log response output
-  
-        // CLEAN THE OUTPUT
+         console.log("ChatGPT Output:", chatGPTOutput); 
+        // clean the output so that html ticks dont appear on results page
         const cleanedOutput = chatGPTOutput
           .replace(/^```(?:html)?/i, "")
           .replace(/```$/, "")
           .trim();
   
-        setChatResponse(cleanedOutput); // Save cleaned response to state
+        setChatResponse(cleanedOutput); 
       } catch (error: any) {
         console.error("Error fetching results:", error.response || error.message);
         alert("Failed to fetch results from ChatGPT.");

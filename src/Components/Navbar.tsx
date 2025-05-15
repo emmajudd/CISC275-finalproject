@@ -1,13 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css"; // Import CSS for styling
+import "./Navbar.css"; 
 
 
 interface NavbarProps {
  darkMode: boolean;
  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }
-
 
 const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
  return (

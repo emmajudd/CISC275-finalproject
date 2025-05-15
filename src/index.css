@@ -54,19 +54,17 @@ body.dark-mode .theme-toggle-btn {
   color: #f1f1f1;
 }
 
-/* Print-specific styles */
 @media print {
-  /* Hide the navbar during printing */
+  /* Hide navbar during printing */
   .navbar {
     display: none !important;
   }
 
-  /* Hide the download button */
+  /* Hide download button */
   .download-btn {
     display: none !important;
   }
 
-  /* Force dark mode styles to be neutral on print */
   body.dark-mode {
     background-color: white !important;
     color: black !important;
@@ -77,7 +75,6 @@ body.dark-mode .theme-toggle-btn {
     background-color: white !important;
   }
 
-  /* Ensure other dark-mode content is styled correctly */
   .dark-mode * {
     background: white !important;
     color: black !important;

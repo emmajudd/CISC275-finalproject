@@ -1,3 +1,6 @@
+// This file includes code generated with the assistance of an AI tool.
+// It contains tests for the BasicQuestions component to verify rendering & submission behavior.
+
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import BasicQuestions from './BasicQuestions';

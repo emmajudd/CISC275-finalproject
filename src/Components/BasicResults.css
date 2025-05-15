@@ -20,42 +20,39 @@ body.dark-mode .chat-response {
   color: #fff !important;
 }
 
-/* Print Styles */
 @media print {
   body {
     background: white !important;
     color: black !important;
   }
 
-  /* Hide the download button during print */
+  /* This hides download button for print */
   .download-btn {
     display: none;
   }
 
-  /* Hide the navigation bar during print */
+  /* This hides navbar for print */
   .navbar {
     display: none !important;
   }
 
-  /* Ensure that the entire results container is printed */
   .results-container {
     color: black !important;
     background: white !important;
     width: 100%;
-    page-break-before: always; /* Ensures the container starts a new page */
+    page-break-before: always; 
   }
 
-  /* Prevent any truncation by forcing page breaks where necessary */
   .results-container h1,
   .results-container h3,
   .results-container p {
-    page-break-after: avoid; /* Avoid breaking after headings and paragraphs */
-    page-break-inside: avoid; /* Avoid breaking inside these elements */
+    page-break-after: avoid; 
+    page-break-inside: avoid; 
   }
 
   .results-container table {
     width: 100%;
-    page-break-inside: auto; /* Allow the table to break across pages if needed */
+    page-break-inside: auto; 
   }
 
   .results-container table th,
@@ -64,13 +61,11 @@ body.dark-mode .chat-response {
     text-align: left;
   }
 
-  /* Optional: remove all dark mode overrides */
   .dark-mode * {
     background: white !important;
     color: black !important;
   }
 
-  /* Ensure text is fully visible and doesn't overflow */
   .results-container * {
     display: block !important;
     visibility: visible !important;
@@ -79,13 +74,11 @@ body.dark-mode .chat-response {
     overflow: visible !important;
   }
 
-  /* Specifically target the career suggestions container if it exists */
   .career-suggestions {
     overflow: visible !important;
     height: auto !important;
   }
 
-  /* Ensure that page breaks occur properly between sections */
   .career-suggestions,
   .career-results {
     page-break-before: always;
