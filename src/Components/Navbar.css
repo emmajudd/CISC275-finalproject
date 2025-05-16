@@ -1,77 +1,81 @@
+/*create a consistent theme accross the website*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
+ }
+ 
+ 
+ body {
   font-family: Arial, sans-serif;
   background-color: #e8eaf6;
   color: #333;
-  padding-top: 60px; 
-}
-
-.navbar {
-font-family: monospace;
-font-size: .95rem;
-position: fixed; 
-top: 0px;
-left: 0; 
-width: 100%; 
-z-index: 1000; 
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #fddeda;
-padding: 10px 20px;
-color: white;
-font-family: 'Arial', sans-serif;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-}
-
-.navbar .nav-links {
-display: flex;
-font-family: monospace;
-list-style: none;
-margin: 0;
-padding: 0;
-}
-
-.navbar .nav-links li {
-margin: 0 15px;
-}
-
-.navbar .nav-links a {
-text-decoration: none;
-color: #050505; 
-font-size: .9rem;
-transition: color 0.3s ease;
-}
-
-.navbar .nav-links a:hover {
-color: #f680a5; 
-}
-
-.navbar .nav-links a.active {
-background-color: #fbb1c8;
-color: white;
-padding: 8px 12px;
-border-radius: 4px;
-transition: background-color 0.3s ease;
-}
-
-@media (max-width: 768px) {
-.navbar {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.navbar .nav-links {
-  flex-direction: column;
-  width: 100%;
-}
-
-.navbar .nav-links li {
-  margin: 10px 0;
-}
-}
+  padding-top: 60px;
+ }
+ /*navbar container that is at the top of the screen no matter what page the user is on*/
+ .navbar {
+ font-family: monospace;
+ font-size: .95rem;
+ position: fixed;
+ top: 0px;
+ left: 0;
+ width: 100%;
+ z-index: 1000;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: #fddeda;
+ padding: 10px 20px;
+ color: white;
+ font-family: 'Arial', sans-serif;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ /*navigation bar links that are displayed inside the navbar and are styled to be consistent with the navbar*/
+ .navbar .nav-links {
+ display: flex;
+ font-family: monospace;
+ list-style: none;
+ margin: 0;
+ padding: 0;
+ }
+ .navbar .nav-links li {
+ margin: 0 15px;
+ }
+ 
+ 
+ .navbar .nav-links a {
+ text-decoration: none;
+ color: #050505;
+ font-size: .9rem;
+ transition: color 0.3s ease;
+ }
+ /*hovering over the navbar links changes the color of the respective text*/
+ .navbar .nav-links a:hover {
+ color: #f680a5;
+ }
+ 
+ 
+ .navbar .nav-links a.active {
+ background-color: #fbb1c8;
+ color: white;
+ padding: 8px 12px;
+ border-radius: 4px;
+ transition: background-color 0.3s ease;
+ }
+ /*when the user presses link changes color and background color*/
+ 
+ 
+ @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+   .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+   .navbar .nav-links li {
+    margin: 10px 0;
+  }
+  }
+ 

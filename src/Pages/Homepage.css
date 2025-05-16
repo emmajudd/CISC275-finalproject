@@ -1,4 +1,4 @@
-/* General Styling */
+/* The homepage.css file was made with the assistance of chatgpt.*/
 body {
   font-family: monospace;
   background-color: #e8eaf6; /* Light background */
@@ -6,75 +6,57 @@ body {
   margin: 0;
   padding: 0;
  }
- 
  body.homepage-active{
   background-image: url('/public/floral.jpg') !important; /* Add your flower background image here */
   background-size: cover; /* Ensure the background covers the full screen */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat;
  }
-
+ 
+ 
  body.dark-mode {
   background-color: #181818;
   color: #f1f1f1;
  }
- 
- 
  body.dark-mode .homepage {
   background-color: #232323;
   color: #f1f1f1;
   box-shadow: 0 4px 16px rgba(0,0,0,0.4);
  }
- 
- 
  body.dark-mode .homepage h1 {
   color: #f9f9fb;
  }
- 
- 
  body.dark-mode .homepage .panel  {
   background-color: #292929;
   color: #080808;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
  }
- 
- 
  body.dark-mode .api-key-form,
  body.dark-mode .chatgpt-container {
   background-color: #292929;
   color: #f1f1f1;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
  }
- 
- 
  body.dark-mode .api-key-form input,
  body.dark-mode .chatgpt-container input {
   background: #232323;
   color: #f1f1f1;
   border: 1px solid #444;
  }
- 
- 
  body.dark-mode .api-key-form input:focus,
  body.dark-mode .chatgpt-container input:focus {
   border-color: #fddeda;
   box-shadow: 0 0 5px #fddeda;
  }
- 
- 
  body.dark-mode .homepage .panel h3 {
   color: #fff;
  }
  body.dark-mode .homepage .panel p {
   color: #fff;
  }
- 
- 
  body.dark-mode .progress-text {
   color: #fff !important;
  }
- 
- 
  /* Homepage Container */
  .homepage {
   max-width: 1200px;
@@ -86,8 +68,6 @@ body {
   text-align: center;
   font-family: monospace;
  }
- 
- 
  /* Title Styling */
  .homepage h1 {
   font-family: monospace;
@@ -95,8 +75,6 @@ body {
   color: #2c3e50; /* Dark blue text */
   margin-bottom: 20px;
  }
- 
- 
  /* API Key Form Styling */
  .api-key-form {
   font-family: monospace;
@@ -106,8 +84,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
  }
- 
- 
  .api-key-form h3 {
   font-family: monospace;
   font-size: 1.5rem;
@@ -116,12 +92,14 @@ body {
    box-shadow: #fddeda;
   margin-bottom: 10px;
  }
-
+ 
+ 
  .dark-mode .api-key-form h3 {
   color: #f1f1f1;
   box-shadow: #040404;
  }
-
+ 
+ 
  .api-key-form input {
   font-family: monospace;
   width: 100%;
@@ -134,12 +112,10 @@ body {
   /* Smooth transition */
   outline: none; /* Remove default outline */
  }
- 
  .api-key-form input:focus {
   border-color: #fddeda; /* Dark blue border on focus */
   box-shadow: 0 0 5px rgba(44, 62, 80, 0.5); /* Subtle shadow on focus */
  }
- 
  .api-key-form .submit-button {
   font-family: monospace;
   display: inline-block;
@@ -153,18 +129,13 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
  }
- 
  .api-key-form .submit-button:hover {
   background-color: #f0f4ff; /* Bright blue hover */
   transform: scale(1.05); /* Slight zoom effect */
  }
- 
- 
  .api-key-form .submit-button:active {
   transform: scale(0.95); /* Slight shrink effect on click */
  }
- 
- 
  /* ChatGPT Container Styling */
  .chatgpt-container {
   font-family: monospace;
@@ -174,8 +145,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
  }
- 
- 
  .chatgpt-container h2 {
   font-family: monospace;
   font-size: 1.5rem;
@@ -186,8 +155,6 @@ body {
  .dark-mode .chatgpt-container h2 {
   color: #f1f1f1;
  }
- 
- 
  .chatgpt-container input {
   font-family: monospace;
   width: 100%;
@@ -199,14 +166,10 @@ body {
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
   outline: none; /* Remove default outline */
  }
- 
- 
  .chatgpt-container input:focus {
   border-color: #fddeda; /* Dark blue border on focus */
   box-shadow: 0 0 5px rgba(44, 62, 80, 0.5); /* Subtle shadow on focus */
  }
- 
- 
  .chatgpt-container .submit-button {
   font-family: monospace;
   display: inline-block;
@@ -220,19 +183,13 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
  }
- 
- 
  .chatgpt-container .submit-button:hover {
-  background-color: #f0f4ff; 
+  background-color: #f0f4ff;
   transform: scale(1.05); /* Slight zoom effect */
  }
- 
- 
  .chatgpt-container .submit-button:active {
   transform: scale(0.95); /* Slight shrink effect on click */
  }
- 
- 
  /* Two-Panel Structure */
  .homepage .panel-container {
   display: flex;
@@ -241,8 +198,6 @@ body {
   gap: 20px; /* Add spacing between panels */
   margin-top: 40px;
  }
- 
- 
  .homepage .panel {
   flex: 1; /* Panels take equal width */
   padding: 20px;
@@ -253,30 +208,22 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
  }
- 
- 
  .homepage .panel:hover {
   transform: rotateY(10deg); /* Slight tilt effect */
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
   background-color: #f0f4ff; /* Light blue highlight */
  }
- 
- 
  .homepage .panel h3 {
   font-size: 1.5rem;
   color: #2c3e50; /* Dark blue text */
   margin-bottom: 10px;
   font-family: monospace;
  }
- 
- 
  .homepage .panel p {
   font-size: .95rem;
   color: #555; /* Subtle gray text */
   font-family: monospace;
  }
- 
- 
  .homepage .panel .button {
   display: inline-block;
   margin-top: 15px;
@@ -291,16 +238,13 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-decoration: none;
  }
- 
  .homepage .panel .button:hover {
   background-color: #f0f4ff; /* Bright blue hover */
   transform: scale(1.05); /* Slight zoom effect */
  }
- 
  .homepage .panel .button:active {
   transform: scale(0.95); /* Slight shrink effect on click */
  }
- 
  .pinky-button {
   align-items: center;
   color: #111;
@@ -318,18 +262,15 @@ body {
   justify-content: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
  }
- 
  .pinky-button:hover {
   background-color: #fbb1c8;
   color: #111;
   transform: scale(1.05);
   border: 2px solid #010101;
  }
- 
  .button-container {
   display: flex;
   justify-content: center;
   width: 100%;
  }
- 
  

@@ -1,3 +1,4 @@
+//The homepage was was made with the asisstance of chatgpt.
 import React, {useState} from "react";
 import { useNavigate} from "react-router-dom"
 import "./Homepage.css"; // Import CSS for styling
