@@ -477,10 +477,10 @@ All files                |   36.23 |    22.91 |   47.36 |   34.82 |
  src/Components          |   36.73 |    23.52 |   51.11 |   34.75 |                   
   BasicAssessment.tsx    |   47.82 |       25 |   45.45 |   45.45 | 73-159            
   BasicQuestions.tsx     |     100 |      100 |     100 |     100 |                   
-  BasicResults.tsx       |       0 |        0 |       0 |       0 | 10-171            
+  BasicResults.tsx       |       0 |        0 |       0 |       0 | 11-186            
   ContactPage.tsx        |     100 |      100 |     100 |     100 |                   
   DetailedAssessment.tsx |   78.26 |      100 |      70 |   76.19 | 93-115            
-  DetailedResults.tsx    |       0 |        0 |       0 |       0 | 10-124            
+  DetailedResults.tsx    |       0 |        0 |       0 |       0 | 11-140            
   Navbar.tsx             |      50 |       50 |   33.33 |   66.66 | 30                
   ProgressBar.tsx        |     100 |      100 |     100 |     100 |                   
  src/Pages               |   29.72 |    16.66 |   14.28 |   29.72 |                   
@@ -490,5 +490,5 @@ All files                |   36.23 |    22.91 |   47.36 |   34.82 |
 Test Suites: 7 passed, 7 total
 Tests:       15 passed, 15 total
 Snapshots:   0 total
-Time:        5.071 s
+Time:        4.924 s
 Ran all test suites.
