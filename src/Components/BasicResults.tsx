@@ -1,4 +1,4 @@
-// Portions of this component were generated with the assistance of an LLM
+// Portions of this component were generated with the assistance of chatgpt
 // Functionality includes handling route state, input validation and redirection, API communication with ChatGPT, and response state management
 
 import React, { useEffect, useState } from "react"; 
