@@ -1,4 +1,4 @@
-// This file includes code generated with the assistance of an AI tool.
+// This file includes code generated with the assistance of a ChatGPT.
 // It contains tests for the BasicAssessment component to verify rendering and progress bar updates.
 
 import React from 'react';

@@ -7,6 +7,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
+/* Styles the heading inside the assessment */
   .detailed-assessment h1 {
     font-size: 2rem;
   color: #2c3e50; 
@@ -14,6 +15,7 @@
   margin-bottom: 20px;
   }
 
+/* Overrides heading color in dark mode */
   body.dark-mode .detailed-assessment h1 {
     color: #fff;
   }
@@ -25,6 +27,7 @@
     margin-bottom: 8px;
   }
   
+/* Styles note for character minimums */
   .char-min {
     font-weight: normal;
     font-family: monospace;
@@ -33,6 +36,7 @@
     margin-top: 4px;
   }
   
+/* Arranges answer options horizontally with spacing */
   .answer-options {
     display: flex;
     justify-content: center;
@@ -77,10 +81,12 @@
     transform: scale(1.05); 
   }
   
+/* Submit button press effect */
   .submit-button:active {
     transform: scale(0.95); 
   }
 
+/* Styles full-screen overlay for popups */
   .popup-overlay {
     position: fixed;
     top: 0;
@@ -105,6 +111,7 @@
     text-align: center;
   }
   
+/* Styles the close (X) button in the popup */
   .close-button {
     position: absolute;
     top: 12px;

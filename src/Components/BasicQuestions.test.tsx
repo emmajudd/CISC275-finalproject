@@ -1,4 +1,4 @@
-// This file includes code generated with the assistance of an AI tool.
+// This file includes code generated with the assistance of ChatGPT.
 // It contains tests for the BasicQuestions component to verify rendering & submission behavior.
 
 import React from 'react';
