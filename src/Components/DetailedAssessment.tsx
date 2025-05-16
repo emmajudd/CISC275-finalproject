@@ -21,7 +21,7 @@ const questions = [
 
 function DetailedAssessment() {
   const navigate = useNavigate(); // for page transitions
-  const [answers, setAnswers] = useState<{ [key: number]: string }>({}); 
+  const [answers, setAnswers] = useState<{ [key: number]: string }>({}); // store user's answers
   const [showPopup, setPopup] = useState(false); 
 
   const handleAnswer = (index: number, answer: string) => {

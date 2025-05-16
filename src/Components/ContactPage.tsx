@@ -1,7 +1,9 @@
+// This file includes our team's contact information and names
 import { useEffect } from "react";
 import "./ContactPage.css";
 
 function ContactPage() {
+  // Add a class to the body tag when the contact page loads and clean up when it unloads
   useEffect(() => {
     document.body.classList.add('contact-page-active');
     return () => document.body.classList.remove('contact-page-active');

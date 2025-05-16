@@ -1,3 +1,4 @@
+/* Holds the entire contact page */
 .contact-container {
   max-width: 500px;
   margin: 40px auto;
@@ -8,6 +9,7 @@
   text-align: center;
  }
 
+ /* Styling for the main heading inside of contact container*/
  .contact-container h1 {
   font-size: 2rem;
   color: #2c3e50; 
@@ -15,10 +17,12 @@
   margin-bottom: 20px;
  }
 
+ /* Overrides heading color in dark mode */
  body.dark-mode .contact-container h1 {
   color: #fff;
  }
  
+/* When the contact page is active, apply a floral background */
 body.contact-page-active{
   background-image: url('/public/floral.jpg') !important;
   background-size: cover;
@@ -60,7 +64,7 @@ body.contact-page-active{
   font-size: 0.98em;
   word-break: break-all;
  }
-
+ /* Adjust email color for dark mode */
  body.dark-mode .contact-email {
   color: #fef9f9;
   font-size: 0.98em;
